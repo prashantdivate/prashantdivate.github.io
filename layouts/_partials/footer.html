@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div><span class="eyebrow">KEEP EXPLORING</span><h2>Good engineering<br>is worth <em>sharing.</em></h2></div>
+    <div class="footer-links"><a class="button button-primary" href="{{ .Site.Data.profile.github }}">Find me on GitHub {{ partial "icon.html" "external" }}</a><a class="text-link" href="{{ "index.xml" | relURL }}">{{ partial "icon.html" "rss" }} Follow the RSS feed</a></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; {{ now.Year }} {{ .Site.Data.profile.name }} <span class="muted">/ Fieldnotes</span></span>
+    <div><a href="{{ "archive/" | relURL }}">Archive</a><a href="{{ "tags/" | relURL }}">Topics</a><button class="motion-toggle js-only" type="button" aria-pressed="false">Motion: <span data-motion-label>on</span></button><span class="built-with">Built with Hugo <span class="tiny-dot"></span></span></div>
+  </div>
+</footer>

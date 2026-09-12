@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Yocto-Lens",
+    "id": "yocto-lens",
+    "eyebrow": "DEVELOPER TOOLING",
+    "description": "A terminal-first lens on Yocto metadata. Explore recipes, review layer structure, and surface issues before the next build.",
+    "url": "https://github.com/prashantdivate/yocto-lens",
+    "tags": [
+      "Go",
+      "Yocto",
+      "Terminal UI"
+    ],
+    "visual": "terminal"
+  },
+  {
+    "name": "VulnTrack",
+    "id": "vulntrack",
+    "eyebrow": "SECURITY VISIBILITY",
+    "description": "Turn a Yocto CVE report into something you can explore. A browser-based dashboard for reviewing vulnerabilities and exporting reports.",
+    "url": "https://github.com/prashantdivate/VulnTrack",
+    "tags": [
+      "CVE",
+      "Yocto",
+      "Dashboard"
+    ],
+    "visual": "security"
+  }
+]

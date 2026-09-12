@@ -1,0 +1,11 @@
+<article class="project-card" data-reveal>
+  <div class="project-preview {{ .visual }}-preview" aria-hidden="true">
+    <div class="preview-bar"><span><i></i><i></i><i></i></span><span>{{ .id }} / concept preview</span></div>
+    {{ if eq .visual "terminal" }}
+    <div class="terminal-body"><div class="terminal-prompt">$ yocto-lens meta-custom</div><div class="terminal-tabs"><span>STATIC</span><span>STYLE</span><span>HEALTH</span></div><div class="terminal-row"><span>recipes-core/</span><b>inspect</b></div><div class="terminal-row"><span>recipes-kernel/</span><b>inspect</b></div><div class="terminal-row"><span>conf/layer.conf</span><b>inspect</b></div><div class="terminal-cursor">&gt; look closer<span>_</span></div></div>
+    {{ else }}
+    <div class="security-body"><div class="security-ring"><span>CVE<small>OVERVIEW</small></span></div><div class="security-bars"><span>Critical<i style="--bar:35%"></i></span><span>High<i style="--bar:65%"></i></span><span>Medium<i style="--bar:85%"></i></span><span>Low<i style="--bar:50%"></i></span></div></div>
+    {{ end }}
+  </div>
+  <div class="project-copy"><span class="eyebrow">{{ .eyebrow }}</span><h3><a href="{{ .url }}">{{ .name }} {{ partial "icon.html" "external" }}</a></h3><p>{{ .description }}</p><div class="project-tags">{{ range .tags }}<span>{{ . }}</span>{{ end }}</div></div>
+</article>

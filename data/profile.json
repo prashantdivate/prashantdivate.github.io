@@ -1,0 +1,20 @@
+{
+  "name": "Prashant Divate",
+  "initials": "PD",
+  "handle": "prashantdivate",
+  "role": "Embedded Linux Engineer",
+  "intro": "I build for the world beyond the browser. Exploring Linux, Yocto, and the small details that make connected devices dependable.",
+  "headline_first": "Small devices.",
+  "headline_second": "Big possibilities.",
+  "github": "https://github.com/prashantdivate",
+  "email": "",
+  "linkedin": "",
+  "topics": [
+    "Embedded Linux",
+    "Yocto",
+    "Containers",
+    "OTA",
+    "Security"
+  ],
+  "about": "My interests sit at the intersection of embedded Linux, system integration, and developer tools. This is a space for technical notes, open-source projects, and ideas worth revisiting."
+}

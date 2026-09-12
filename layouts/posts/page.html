@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<article class="article-page container">
+  <header class="article-header"><a class="eyebrow breadcrumb" href="{{ "posts/" | relURL }}">&larr; BACK TO JOURNAL</a><div class="article-tags">{{ range .GetTerms "tags" }}<a class="filter-chip" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div><h1>{{ .Title }}</h1><p class="article-description">{{ .Description }}</p><div class="article-meta"><span class="avatar-monogram">{{ .Site.Data.profile.initials }}</span><div><strong>{{ .Site.Data.profile.name }}</strong><span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time> &middot; {{ .ReadingTime }} min read</span></div><button class="text-link copy-page js-only" type="button">Copy link {{ partial "icon.html" "copy" }}</button></div></header>
+  <div class="article-cover"><img src="{{ printf "images/art-%s.svg" (.Params.art | default .Site.Params.defaultArt) | relURL }}" alt="Abstract {{ .Params.art | default "system" }} illustration" width="720" height="440"></div>
+  <div class="article-layout"><div class="article-main">
+    {{ if .Params.sample }}<aside class="sample-notice"><strong>Starter note</strong><p>This is example content included with this website. Review, replace, or set <code>draft = true</code> before sharing it as your own technical writing.</p></aside>{{ end }}
+    <div class="prose" id="article-content">{{ .Content }}</div>
+    <div class="article-end"><span class="terminal-eyebrow">// end of fieldnote</span><a href="{{ "posts/" | relURL }}" class="text-link">Back to all notes {{ partial "icon.html" "arrow" }}</a></div>
+  </div><aside class="article-sidebar"><div class="toc-box"><span class="eyebrow">ON THIS PAGE</span>{{ .TableOfContents }}<a class="toc-top" href="#main">Back to top &uarr;</a></div></aside></div>
+</article>
+<section class="container section-block related-section"><div class="section-heading"><div><span class="eyebrow">KEEP THE THREAD GOING</span><h2>More to explore.</h2></div></div><div class="post-grid">{{ $others := where (where .Site.RegularPages "Section" "posts") "RelPermalink" "ne" .RelPermalink }}{{ range first 3 $others.ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div></section>
+{{ end }}

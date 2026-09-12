@@ -1,0 +1,45 @@
+<div class="stack-scene" data-active-layer="linux">
+<svg class="stack-svg" viewBox="0 0 580 460" fill="none" role="img" aria-labelledby="stack-title stack-desc">
+<title id="stack-title">A connected system, layer by layer</title><desc id="stack-desc">An animated isometric stack showing application, Linux, and hardware layers. A conceptual illustration, not a live device.</desc>
+<defs>
+  <linearGradient id="board-top" x1="110" y1="160" x2="460" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#2b382e"/><stop offset="1" stop-color="#111b17"/></linearGradient>
+  <linearGradient id="chip-top" x1="207" y1="220" x2="340" y2="275"><stop stop-color="#e4ffa4"/><stop offset="1" stop-color="#96c45f"/></linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c7f26b" stop-opacity="0"/><stop offset="1" stop-color="#c7f26b" stop-opacity=".4"/></linearGradient>
+  <radialGradient id="ground-glow"><stop stop-color="#a2de56" stop-opacity=".18"/><stop offset="1" stop-color="#a2de56" stop-opacity="0"/></radialGradient>
+  <pattern id="scene-grid" width="32" height="18.4" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M32 0H0v18.4" stroke="#779875" stroke-opacity=".12" stroke-width=".7"/></pattern>
+  <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+</defs>
+<ellipse cx="290" cy="364" rx="230" ry="90" fill="url(#ground-glow)"/>
+<path d="M20 318 285 165 560 324 292 478Z" fill="url(#scene-grid)"/>
+<path class="signal-orbit" d="M68 304 284 180 512 311 295 437Z" stroke="#3a5140" stroke-dasharray="4 8"/>
+<path d="M291 29V419" stroke="#7b9c6a" stroke-opacity=".18" stroke-dasharray="3 7"/>
+<path d="M52 347h32m-16-16v32M478 160h24m-12-12v24" stroke="#748569" stroke-opacity=".6"/>
+<g class="stack-layer layer-hardware">
+  <path d="m123 307 161-93 169 98v17l-162 94-168-97Z" fill="#0a0f0c" stroke="#4d6846"/>
+  <path d="m123 307 161-93 169 98-162 94Z" fill="url(#board-top)" stroke="#76955d"/>
+  <path d="M291 406v17m-142-113 135-78 143 83-136 78Z" stroke="#354c36"/>
+  <g stroke="#6d9258" stroke-opacity=".55"><path d="m175 302 50-29 47 27m56-25 41 24-39 23M228 365l31-18m65 17 48-27m-100-95 15 9-21 12m-110 58 34 19 35-20"/><path d="m317 231 10 6m12 7 10 6m12 7 10 6m12 7 10 6m12 7 10 6m12 7 10 6" stroke-width="5"/></g>
+  <path d="m245 291 42-24 45 26v16l-42 24-45-26Z" fill="#142414" stroke="#7a985d"/><path d="m245 291 42-24 45 26-42 24Z" fill="#536a3d"/>
+  <path class="data-trace" d="m160 318 53 31 36-20m83-21 49 28 46-26" stroke="#c7f26b" stroke-width="2" stroke-dasharray="6 90"/>
+</g>
+<g class="stack-layer layer-linux">
+  <path d="m123 232 161-93 169 98v17l-162 94-168-97Z" fill="#111b12" stroke="#617d48"/>
+  <path d="m123 232 161-93 169 98-162 94Z" fill="url(#board-top)" stroke="#b6db70"/>
+  <path d="m149 232 135-78 143 83-136 78Z" stroke="#55703e"/><path d="M291 331v17" stroke="#829e50"/>
+  <path d="m216 223 69-40 76 44v15l-69 40-76-44Z" fill="#759641" stroke="#c7f26b"/>
+  <path d="m216 223 69-40 76 44-69 40Z" fill="url(#chip-top)"/>
+  <g stroke="#c7f26b" stroke-width="2"><path d="m233 246-11 6m24 1-11 6m24 1-11 6m24 1-11 6m76-46 12-7m-25-1 12-7m-25-1 12-7m-25-1 12-7m-95 17-12-7m25-1-12-7m25-1-12-7m25-1-12-7m77 59 13 8m-26 0 13 8m-26 0 13 8m-26 0 13 8"/></g>
+  <text x="288" y="232" text-anchor="middle" fill="#1c2e15" font-family="monospace" font-weight="bold" font-size="22" transform="rotate(30 288 232) skewX(-30)">LINUX</text>
+  <circle cx="171" cy="232" r="3" fill="#c7f26b" class="pulse-node"/><circle cx="406" cy="239" r="3" fill="#c7f26b" class="pulse-node"/>
+</g>
+<g class="stack-layer layer-apps">
+  <path d="m153 139 131-76 139 80v12l-132 76-138-80Z" fill="#152019" fill-opacity=".88" stroke="#52704c"/>
+  <path d="m153 139 131-76 139 80-132 77Z" fill="#26382b" fill-opacity=".6" stroke="#8dad6c"/>
+  <g fill="#355034" stroke="#7aa864"><path d="m197 137 35-20 38 22-35 20Z"/><path d="m258 102 26-15 38 22-27 16Z"/><path d="m296 147 35-20 38 22-35 20Z"/><path d="m259 175 24-14 27 15-24 14Z"/></g>
+  <path class="data-trace" d="m235 159 34 20 65-38" stroke="#c7f26b" stroke-width="2" stroke-dasharray="5 80"/>
+</g>
+<g stroke="#bed884" stroke-opacity=".4" stroke-dasharray="2 5"><path d="M153 151v94M423 155v96M291 232v37"/></g>
+<g class="stack-labels" font-family="monospace" font-size="10" letter-spacing="1.5"><path d="M389 104h93" stroke="#57654f"/><circle cx="389" cy="104" r="2.5" fill="#c7f26b"/><text x="420" y="94" fill="#b5c0ac">APPLICATIONS</text><path d="M380 276h112" stroke="#57654f"/><circle cx="380" cy="276" r="2.5" fill="#c7f26b"/><text x="428" y="265" fill="#c7f26b">KERNEL</text><path d="M98 361h93" stroke="#57654f"/><text x="54" y="380" fill="#b5c0ac">HARDWARE</text></g>
+<circle class="floating-particle particle-one" cx="99" cy="173" r="3" fill="#c7f26b"/><circle class="floating-particle particle-two" cx="482" cy="341" r="2.5" fill="#beabfa"/>
+</svg>
+</div>

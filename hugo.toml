@@ -1,54 +1,41 @@
+# Only Hugo builds this website. GitHub Actions overrides baseURL automatically.
 baseURL = 'https://prashantdivate.github.io/'
 languageCode = 'en-us'
-title = 'Prashant Divate | Embedded Linux Engineer'
+title = 'Prashant Divate | Fieldnotes'
 enableRobotsTXT = true
-enableGitInfo = false
-
-[pagination]
-  pagerSize = 8
+summaryLength = 30
+buildDrafts = false
+buildFuture = false
 
 [params]
-  description = 'Embedded Linux, Yocto, OTA, containers, security and edge systems.'
+  description = 'Fieldnotes on embedded Linux, Yocto, containers, and the engineering behind connected devices.'
   author = 'Prashant Divate'
-  role = 'Embedded Software Developer – Linux'
-  location = 'Bengaluru, India'
-  github = 'https://github.com/prashantdivate'
-  linkedin = '#'
-  email = '#'
-
-[markup]
-  [markup.highlight]
-    noClasses = false
-    lineNos = true
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  defaultTheme = 'dark'
+  defaultArt = 'linux'
 
 [taxonomies]
   tag = 'tags'
-  category = 'categories'
-
-[menu]
-  [[menu.main]]
-    name = 'Home'
-    url = '/'
-    weight = 10
-  [[menu.main]]
-    name = 'Blog'
-    url = '/posts/'
-    weight = 20
-  [[menu.main]]
-    name = 'Projects'
-    url = '/projects/'
-    weight = 30
-  [[menu.main]]
-    name = 'About'
-    url = '/about/'
-    weight = 40
-  [[menu.main]]
-    name = 'Search'
-    url = '/search/'
-    weight = 50
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[markup]
+  [markup.highlight]
+    style = 'dracula'
+    noClasses = false
+    lineNos = false
+    guessSyntax = false
+  [markup.goldmark.renderer]
+    unsafe = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[sitemap]
+  changeFreq = 'weekly'
+  priority = 0.5
+
+[caches.images]
+  dir = ':cacheDir/images'

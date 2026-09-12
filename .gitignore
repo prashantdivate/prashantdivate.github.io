@@ -1,4 +1,10 @@
 /public/
-/resources/_gen/
-.hugo_build.lock
+/resources/
+/.hugo_build.lock
+/.cache/
+/.tools/
+/.venv/
+/test-results/
+/__pycache__/
 .DS_Store
+Thumbs.db

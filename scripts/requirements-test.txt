@@ -1,0 +1,2 @@
+# Test-only dependency. The website itself needs no Python or JavaScript packages.
+playwright==1.57.0

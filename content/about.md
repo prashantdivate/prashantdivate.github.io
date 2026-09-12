@@ -1,18 +1,29 @@
----
-title: "About"
-description: "Embedded Linux engineer building reliable edge systems."
----
++++
+title = 'An engineer. Always curious.'
+type = 'about'
+description = 'Prashant Divate: embedded Linux, developer tooling, and the systems in between.'
++++
 
-I work on embedded Linux platforms where **boot reliability, OTA updates, container lifecycle, security, and observability** matter in the real world.
+## The work behind the interface
 
-My engineering interests include Yocto/OpenEmbedded, Linux on NXP i.MX8M Plus, OSTree, Podman, secure boot, OP-TEE, device provisioning, vulnerability management and production-grade OTA architecture.
+I am Prashant Divate, an embedded Linux engineer interested in the software that connects hardware to useful products. My focus includes Yocto, containers, operating-system updates, and developer tooling.
 
-This site is my engineering notebook: practical lessons, failure analysis, reusable tools, and experiments from building systems that need to keep working after deployment.
+This journal is a place to turn questions into clear explanations. Small experiments, useful diagrams, debugging approaches, and open-source ideas all have a home here.
 
-## What I enjoy building
+## How I like to think
 
-- Production embedded Linux distributions with Yocto/OpenEmbedded.
-- Safe OTA update mechanisms for OS and application containers.
-- Device-side agents for fleet management and remote diagnostics.
-- Security tooling around CVEs, SBOMs, secure boot and trusted execution.
-- Developer tools that make embedded Linux workflows easier to understand.
+**Understand the boundary.** A board, a kernel, a container, and an application see different parts of the same system. Knowing where responsibility changes hands makes debugging more useful.
+
+**Keep the evidence.** A good explanation should help someone repeat the observation, not just repeat the conclusion.
+
+**Make the next change easier.** A small tool or a well-written note should reduce the work needed tomorrow.
+
+## Open-source work
+
+Yocto-Lens focuses on Yocto metadata and layer analysis. VulnTrack makes Yocto CVE reports easier to explore. Their repositories are linked from the Projects page.
+
+## About this site
+
+Fieldnotes is a static website built with Hugo. Posts are Markdown files, and GitHub Actions publishes the generated website to GitHub Pages. There is no analytics service, tracking pixel, or newsletter database in this package.
+
+The animated graphics are conceptual illustrations, not live device telemetry. Theme and motion preferences are stored only in your browser.

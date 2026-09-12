@@ -1,0 +1,10 @@
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+  <div class="search-dialog-top"><span class="eyebrow" id="search-title">SEARCH FIELDNOTES</span><button class="icon-button" type="button" data-close-search aria-label="Close search">{{ partial "icon.html" "close" }}</button></div>
+  <div class="search-ui" data-search data-index="{{ "index.json" | relURL }}">
+    <label class="sr-only" for="dialog-search-input">Search articles</label>
+    <div class="search-box">{{ partial "icon.html" "search" }}<input id="dialog-search-input" type="search" placeholder="Linux, containers, an idea..." autocomplete="off"></div>
+    <p class="search-status muted" role="status">Search titles, topics, and article text.</p>
+    <div class="search-results"></div>
+  </div>
+  <div class="search-hint"><kbd>Esc</kbd> to close <span>Local search. No tracking.</span></div>
+</dialog>

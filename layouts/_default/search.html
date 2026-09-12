@@ -1,9 +1,0 @@
-{{ define "main" }}
-<section class="page-hero shell reveal"><div class="eyebrow">QUERY / KNOWLEDGE BASE</div><h1>Search the engineering log</h1><p>Search titles, descriptions, tags and article text.</p></section>
-<section class="section shell search-shell">
-  <div class="search-box reveal"><span>⌕</span><input id="searchInput" type="search" placeholder="Try: OSTree, Yocto, Podman, secure boot..." autocomplete="off"><kbd>ESC</kbd></div>
-  <div class="search-meta" id="searchMeta">Start typing to search.</div>
-  <div class="search-results" id="searchResults"></div>
-</section>
-<script>window.SEARCH_INDEX_URL='{{ "index.json" | relURL }}';</script>
-{{ end }}

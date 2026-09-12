@@ -1,0 +1,115 @@
+name: Build, verify and deploy Fieldnotes
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    # Do not deploy a non-default branch, even if both main and master exist.
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      HUGO_ENVIRONMENT: production
+      TZ: Asia/Kolkata
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Read GitHub Pages URL
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Python for verification
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned Hugo release
+        run: bash scripts/install-hugo.sh
+
+      - name: Validate source files and JavaScript syntax
+        run: |
+          python scripts/audit_source.py
+          node --check assets/js/main.js
+
+      - name: Install browser test tooling
+        run: |
+          python -m pip install -r scripts/requirements-test.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Verification pass 1 - root URL
+        run: |
+          hugo --gc --minify \
+            --destination "$RUNNER_TEMP/fieldnotes-root" \
+            --baseURL 'http://127.0.0.1:8765/'
+          python scripts/check_site.py "$RUNNER_TEMP/fieldnotes-root" \
+            --base-url 'http://127.0.0.1:8765/'
+          python scripts/browser_test.py "$RUNNER_TEMP/fieldnotes-root" \
+            --base-url 'http://127.0.0.1:8765/' \
+            --output test-results/root
+
+      - name: Verification pass 2 - project URL
+        run: |
+          hugo --gc --minify \
+            --destination "$RUNNER_TEMP/fieldnotes-project/prashantdivate" \
+            --baseURL 'http://127.0.0.1:8766/prashantdivate/'
+          python scripts/check_site.py "$RUNNER_TEMP/fieldnotes-project/prashantdivate" \
+            --base-url 'http://127.0.0.1:8766/prashantdivate/'
+          python scripts/browser_test.py "$RUNNER_TEMP/fieldnotes-project/prashantdivate" \
+            --base-url 'http://127.0.0.1:8766/prashantdivate/' \
+            --output test-results/project
+
+      - name: Build the actual production artifact
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          test -n "$PAGES_BASE_URL"
+          BASE_URL="${PAGES_BASE_URL%/}/"
+          hugo --gc --minify --destination public --baseURL "$BASE_URL"
+          python scripts/check_site.py public --base-url "$BASE_URL"
+          echo "### Site artifact verified" >> "$GITHUB_STEP_SUMMARY"
+          echo "Publishing generated public/ to $BASE_URL" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save test reports and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fieldnotes-verification
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload only the generated website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified artifact to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
