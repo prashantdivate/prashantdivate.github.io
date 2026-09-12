@@ -1,7 +1,7 @@
 {{ define "main" }}
-<section class="container page-intro"><a class="eyebrow breadcrumb" href="{{ "" | relURL }}">FIELDNOTES / JOURNAL</a><h1>{{ .Title }}<span class="accent">.</span></h1><p>{{ .Description }}</p></section>
+<section class="container page-intro"><a class="eyebrow breadcrumb" href="{{ "" | relURL }}">FIELDNOTES / BLOGS</a><h1>{{ .Title }}<span class="accent">.</span></h1><p>{{ .Description }}</p></section>
 <section class="container journal-list" data-filterable>
-  <div class="journal-toolbar"><div class="filter-buttons js-only" aria-label="Filter articles by topic"><button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">All notes</button>{{ range .Site.Taxonomies.tags.Alphabetical }}<button type="button" class="filter-chip" data-filter="{{ .Page.Title | lower }}" aria-pressed="false">{{ .Page.Title }}</button>{{ end }}</div><a class="text-link" href="{{ "archive/" | relURL }}">Archive {{ partial "icon.html" "arrow" }}</a></div>
+  <div class="journal-toolbar"><div class="filter-buttons js-only" aria-label="Filter articles by topic"><button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">All posts</button>{{ range .Site.Taxonomies.tags.Alphabetical }}<button type="button" class="filter-chip" data-filter="{{ .Page.Title | lower }}" aria-pressed="false">{{ .Page.Title }}</button>{{ end }}</div><a class="text-link" href="{{ "archive/" | relURL }}">Archive {{ partial "icon.html" "arrow" }}</a></div>
   <p class="filter-status sr-only" role="status"></p>
   <div class="post-grid">{{ range .Pages.ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div>
   <p class="no-posts" hidden>No notes in this topic yet.</p>

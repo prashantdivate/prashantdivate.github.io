@@ -3,7 +3,7 @@
   "initials": "PD",
   "handle": "prashantdivate",
   "role": "Embedded Linux Engineer",
-  "intro": "I build for the world beyond the browser. Exploring Linux, Yocto, and the small details that make connected devices dependable.",
+  "intro": "I build software for the world beyond the browser: Linux systems, Yocto images, update flows, and the details that make connected devices dependable in the field.",
   "headline_first": "Small devices.",
   "headline_second": "Big possibilities.",
   "github": "https://github.com/prashantdivate",
@@ -16,5 +16,5 @@
     "OTA",
     "Security"
   ],
-  "about": "My interests sit at the intersection of embedded Linux, system integration, and developer tools. This is a space for technical notes, open-source projects, and ideas worth revisiting."
+  "about": "I am an embedded Linux engineer, an artist by nature, and a developer by passion. My work sits where hardware, Linux, automation, and open-source tooling meet."
 }

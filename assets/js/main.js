@@ -168,7 +168,7 @@
     async function runSearch() {
       const current = ++generation;
       const query = input.value.trim().toLocaleLowerCase();
-      status.textContent = 'Searching the journal...';
+      status.textContent = 'Searching the blogs...';
       try {
         const items = await loadIndex(search.dataset.index);
         if (current !== generation) return;
@@ -188,7 +188,7 @@
       } catch (_) {
         if (current !== generation) return;
         results.replaceChildren();
-        status.textContent = 'Search could not load. Try again, or browse the Journal or Archive.';
+        status.textContent = 'Search could not load. Try again, or browse Blogs or Archive.';
       }
     }
     input.addEventListener('input', () => {

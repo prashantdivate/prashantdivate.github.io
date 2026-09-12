@@ -1,4 +1,4 @@
 {{ define "main" }}
-<section class="container page-intro"><span class="eyebrow">FIELDNOTES / TOPICS</span><h1>Follow a thread<span class="accent">.</span></h1><p>Explore the journal by topic.</p></section>
+<section class="container page-intro"><span class="eyebrow">FIELDNOTES / TOPICS</span><h1>Follow a thread<span class="accent">.</span></h1><p>Explore the blogs by topic.</p></section>
 <section class="container taxonomy-grid">{{ range .Data.Terms.Alphabetical }}<a class="topic-card" href="{{ .Page.RelPermalink }}"><span>{{ .Page.Title }}</span><small>{{ .Count }} notes {{ partial "icon.html" "arrow" }}</small></a>{{ end }}</section>
 {{ end }}

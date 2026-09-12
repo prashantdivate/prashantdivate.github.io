@@ -5,12 +5,13 @@
       <span class="brand-type">prashant<span>divate<span class="brand-dot">.</span></span></span>
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="page"{{ end }}>Journal</a>
+      <a href="{{ "" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a>
+      <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="page"{{ end }}>Blogs</a>
       <a href="{{ "projects/" | relURL }}" {{ if eq .Section "projects" }}aria-current="page"{{ end }}>Projects</a>
       <a href="{{ "about/" | relURL }}" {{ if eq .Type "about" }}aria-current="page"{{ end }}>About</a>
     </nav>
     <div class="nav-actions">
-      <a class="search-trigger" href="{{ "search/" | relURL }}" data-open-search aria-label="Search the journal">{{ partial "icon.html" "search" }}<span>Search</span><kbd>/</kbd></a>
+      <a class="search-trigger" href="{{ "search/" | relURL }}" data-open-search aria-label="Search the blogs">{{ partial "icon.html" "search" }}<span>Search</span><kbd>/</kbd></a>
       <button class="icon-button theme-toggle js-only" type="button" aria-label="Switch color theme" title="Switch color theme">{{ partial "icon.html" "sun" }}</button>
       <button class="icon-button menu-toggle js-only" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">{{ partial "icon.html" "menu" }}</button>
     </div>

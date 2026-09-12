@@ -8,7 +8,7 @@ art = "notes"
 sample = true
 +++
 
-This journal is a place for ideas that deserve more than a chat message and less than a textbook. The website is intentionally simple to maintain: content lives in Markdown files, layout lives in Hugo templates, and visual styling lives in one stylesheet.
+This blog is a place for ideas that deserve more than a chat message and less than a textbook. The website is intentionally simple to maintain: content lives in Markdown files, layout lives in Hugo templates, and visual styling lives in one stylesheet.
 
 This article is starter content. Replace it with your own introduction when you are ready.
 
