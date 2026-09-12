@@ -2,19 +2,20 @@
   "name": "Prashant Divate",
   "initials": "PD",
   "handle": "prashantdivate",
-  "role": "Embedded Linux Engineer",
-  "intro": "I build software for the world beyond the browser: Linux systems, Yocto images, update flows, and the details that make connected devices dependable in the field.",
+  "role": "Embedded Linux / Yocto Engineer",
+  "intro": "I build Yocto-based Linux platforms, secure update paths, and fleet tooling for connected devices that need to survive real field conditions.",
   "headline_first": "Small devices.",
   "headline_second": "Big possibilities.",
   "github": "https://github.com/prashantdivate",
   "email": "",
-  "linkedin": "",
+  "linkedin": "https://www.linkedin.com/in/prashant-divate/",
   "topics": [
     "Embedded Linux",
     "Yocto",
     "Containers",
     "OTA",
-    "Security"
+    "Security",
+    "BSP"
   ],
-  "about": "I am an embedded Linux engineer, an artist by nature, and a developer by passion. My work sits where hardware, Linux, automation, and open-source tooling meet."
+  "about": "I am an embedded Linux engineer with 7+ years across Yocto distro engineering, BSP integration, OTA/update systems, CI/CD, and fleet management. I like turning hard platform work into repeatable tools and clear writing."
 }
