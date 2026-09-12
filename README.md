@@ -85,10 +85,26 @@ as documented production incidents or as writing you have not reviewed.
 Use Hugo **0.166.0**, as pinned in `.hugo-version`. Standard Hugo is sufficient;
 Hugo Extended also works. There is no Sass or Node build to install.
 
+Use the included launcher:
+
+```powershell
+# Windows PowerShell
+.\scripts\serve.ps1
+```
+
+```bash
+# Linux
+bash scripts/serve.sh
+```
+
+Open `http://127.0.0.1:1313/`. To preview draft posts, run
+`.\scripts\serve.ps1 -Drafts` on Windows or `DRAFTS=1 bash scripts/serve.sh`
+on Linux.
+
 Install the official release for your operating system:
 https://github.com/gohugoio/hugo/releases/tag/v0.166.0
 
-From this folder:
+Or run Hugo manually from this folder:
 
 ```bash
 hugo version
