@@ -1,0 +1,54 @@
+baseURL = 'https://prashantdivate.github.io/'
+languageCode = 'en-us'
+title = 'Prashant Divate | Embedded Linux Engineer'
+enableRobotsTXT = true
+enableGitInfo = false
+
+[pagination]
+  pagerSize = 8
+
+[params]
+  description = 'Embedded Linux, Yocto, OTA, containers, security and edge systems.'
+  author = 'Prashant Divate'
+  role = 'Embedded Software Developer – Linux'
+  location = 'Bengaluru, India'
+  github = 'https://github.com/prashantdivate'
+  linkedin = '#'
+  email = '#'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = 'Blog'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 30
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 40
+  [[menu.main]]
+    name = 'Search'
+    url = '/search/'
+    weight = 50
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']

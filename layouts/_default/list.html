@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-hero shell reveal">
+  <div class="eyebrow">ARCHIVE / {{ upper .Section }}</div>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p>{{ . }}</p>{{ end }}
+</section>
+<section class="section shell">
+  {{ if eq .Section "posts" }}
+    <div class="filter-bar reveal">
+      <button class="filter active" data-filter="all">All</button>
+      {{ range site.Taxonomies.tags.ByCount }}<button class="filter" data-filter="{{ .Page.Title | urlize }}">{{ .Page.Title }} <sup>{{ .Count }}</sup></button>{{ end }}
+    </div>
+    <div class="post-list" id="postList">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="post-row reveal" data-tags="{{ delimit (apply .Params.tags "urlize" ".") " " }}">
+        <div class="post-row-date"><span>{{ .Date.Format "02" }}</span>{{ upper (.Date.Format "Jan") }}<small>{{ .Date.Format "2006" }}</small></div>
+        <div><div class="post-topline">{{ range first 3 .Params.tags }}<span>{{ . }}</span>{{ end }}</div><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Description }}</p></div>
+        <a class="row-arrow" href="{{ .RelPermalink }}">↗</a>
+      </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="project-grid">
+      {{ range .Pages.ByWeight }}
+      <a class="project-card reveal" href="{{ .RelPermalink }}"><div class="project-index">0{{ .Weight }}</div><div class="project-glow"></div><div class="project-status"><i></i>{{ .Params.status }}</div><h3>{{ .Title }}</h3><p>{{ .Description }}</p><div class="tech-row">{{ range .Params.tech }}<span>{{ . }}</span>{{ end }}</div><div class="project-arrow">↗</div></a>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
+{{ end }}

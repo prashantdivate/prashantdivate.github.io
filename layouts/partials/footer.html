@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <div class="brand footer-brand"><span class="brand-mark"><span></span></span><span class="brand-text">PD<span>//</span>DEV</span></div>
+      <p>Building dependable software for constrained, connected systems.</p>
+    </div>
+    <div class="footer-links">
+      <a href="{{ "/posts/" | relURL }}">Engineering Log</a>
+      <a href="{{ "/projects/" | relURL }}">Projects</a>
+      <a href="{{ "/about/" | relURL }}">About</a>
+      <a href="{{ site.Params.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <span>© {{ now.Year }} {{ site.Params.author }}</span>
+    <span class="system-status"><i></i> SYSTEMS NOMINAL</span>
+    <span>Built with Hugo + GitHub Pages</span>
+  </div>
+</footer>
