@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" fill="none">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#9ed89e" stop-opacity=".16"/><stop offset="1" stop-color="#9ed89e" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" stroke="#9ed89e" stroke-opacity=".06"/></pattern>
+    <linearGradient id="screen" x1="130" y1="120" x2="480" y2="310" gradientUnits="userSpaceOnUse"><stop stop-color="#9ed89e" stop-opacity=".24"/><stop offset="1" stop-color="#9ed89e" stop-opacity=".04"/></linearGradient>
+  </defs>
+  <rect width="720" height="440" fill="#14221b"/>
+  <rect width="720" height="440" fill="url(#grid)"/>
+  <ellipse cx="360" cy="222" rx="285" ry="205" fill="url(#glow)"/>
+  <path d="M35 85h12m-6-6v12M672 350h12m-6-6v12" stroke="#9ed89e" stroke-opacity=".4"/>
+  <path d="M122 155 298 54l176 101-176 101Z" fill="url(#screen)" stroke="#9ed89e" stroke-opacity=".7"/>
+  <path d="M122 155v108l176 101V256Z" fill="#0d1510" stroke="#9ed89e" stroke-opacity=".42"/>
+  <path d="M474 155v108L298 364V256Z" fill="#122018" stroke="#9ed89e" stroke-opacity=".42"/>
+  <path d="M174 165 298 94l124 71-124 71Z" fill="#1d3526" stroke="#9ed89e" stroke-opacity=".55"/>
+  <path d="M208 164h178M231 187h132M255 210h82" stroke="#9ed89e" stroke-width="5" stroke-linecap="round" stroke-opacity=".75"/>
+  <path d="M484 193c42-23 76-15 101 18 22 29 18 68-10 92-28 25-68 25-101 0" stroke="#c4b0ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M450 256h117" stroke="#c4b0ee" stroke-width="5" stroke-linecap="round"/>
+  <path d="M545 232 584 256l-39 24" stroke="#c4b0ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="482" y="310" width="112" height="42" rx="6" fill="#171424" stroke="#c4b0ee" stroke-opacity=".8"/>
+  <text x="538" y="335" text-anchor="middle" fill="#cfc5e6" font-family="monospace" font-size="12">RDP CLIENT</text>
+  <text x="360" y="389" text-anchor="middle" fill="#9ed89e" fill-opacity=".62" font-family="monospace" font-size="10" letter-spacing="2">WESTON  /  WAYLAND  /  FREERDP  /  TLS</text>
+</svg>

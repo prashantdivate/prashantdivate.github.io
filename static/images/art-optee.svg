@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" fill="none">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#e5c788" stop-opacity=".16"/><stop offset="1" stop-color="#e5c788" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" stroke="#e5c788" stroke-opacity=".06"/></pattern>
+    <linearGradient id="secure" x1="215" y1="112" x2="504" y2="320" gradientUnits="userSpaceOnUse"><stop stop-color="#e5c788" stop-opacity=".28"/><stop offset="1" stop-color="#e5c788" stop-opacity=".04"/></linearGradient>
+  </defs>
+  <rect width="720" height="440" fill="#251f17"/>
+  <rect width="720" height="440" fill="url(#grid)"/>
+  <ellipse cx="360" cy="218" rx="285" ry="205" fill="url(#glow)"/>
+  <path d="M35 85h12m-6-6v12M672 350h12m-6-6v12" stroke="#e5c788" stroke-opacity=".4"/>
+  <path d="M155 226h115m180 0h115" stroke="#e5c788" stroke-opacity=".28"/>
+  <circle cx="270" cy="226" r="4" fill="#e5c788"/>
+  <circle cx="450" cy="226" r="4" fill="#e5c788"/>
+  <path d="M216 172 360 89l144 83-144 83Z" fill="url(#secure)" stroke="#e5c788" stroke-opacity=".7"/>
+  <path d="M216 172v94l144 83v-94Z" fill="#14110d" stroke="#e5c788" stroke-opacity=".45"/>
+  <path d="M504 172v94l-144 83v-94Z" fill="#211a10" stroke="#e5c788" stroke-opacity=".45"/>
+  <path d="M286 210 360 167l74 43-74 43Z" fill="#332916" stroke="#e5c788" stroke-opacity=".65"/>
+  <path d="M318 222v-21a42 42 0 0 1 84 0v21" stroke="#e5c788" stroke-width="5"/>
+  <rect x="307" y="222" width="106" height="73" rx="8" fill="#e5c788" fill-opacity=".78"/>
+  <circle cx="360" cy="254" r="7" fill="#2c2415"/>
+  <path d="M360 261v15" stroke="#2c2415" stroke-width="3"/>
+  <text x="360" y="383" text-anchor="middle" fill="#e5c788" fill-opacity=".62" font-family="monospace" font-size="10" letter-spacing="2">NORMAL WORLD  /  SECURE WORLD  /  TRUSTED APP</text>
+</svg>

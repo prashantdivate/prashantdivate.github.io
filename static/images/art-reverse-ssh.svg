@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" fill="none">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#a9f36a" stop-opacity=".15"/><stop offset="1" stop-color="#a9f36a" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" stroke="#a9f36a" stroke-opacity=".055"/></pattern>
+    <linearGradient id="node" x1="170" y1="120" x2="520" y2="310" gradientUnits="userSpaceOnUse"><stop stop-color="#a9f36a" stop-opacity=".22"/><stop offset="1" stop-color="#a9f36a" stop-opacity=".035"/></linearGradient>
+  </defs>
+  <rect width="720" height="440" fill="#142018"/>
+  <rect width="720" height="440" fill="url(#grid)"/>
+  <ellipse cx="360" cy="222" rx="285" ry="205" fill="url(#glow)"/>
+  <path d="M35 85h12m-6-6v12M672 350h12m-6-6v12" stroke="#a9f36a" stroke-opacity=".4"/>
+  <path d="M354 82c-34 0-60 18-69 47-37 1-64 27-64 60 0 38 32 64 72 64h134c42 0 72-28 72-66 0-33-26-59-63-63-17-29-45-44-82-42Z" fill="url(#node)" stroke="#a9f36a" stroke-opacity=".8"/>
+  <text x="360" y="174" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="13">SHELLHUB CLOUD</text>
+  <text x="360" y="198" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="10">reverse ssh broker</text>
+  <g stroke="#a9f36a" stroke-width="4" stroke-linecap="round" stroke-opacity=".75">
+    <path d="M250 277 166 326"/>
+    <path d="M360 278v64"/>
+    <path d="M470 277 554 326"/>
+  </g>
+  <g fill="#101812" stroke="#a9f36a" stroke-opacity=".72">
+    <rect x="105" y="318" width="122" height="58" rx="8"/>
+    <rect x="299" y="333" width="122" height="58" rx="8"/>
+    <rect x="493" y="318" width="122" height="58" rx="8"/>
+  </g>
+  <g fill="#b5c0ac" font-family="monospace" font-size="10" text-anchor="middle">
+    <text x="166" y="352">DEVICE 01</text>
+    <text x="360" y="367">DEVICE 02</text>
+    <text x="554" y="352">DEVICE 03</text>
+  </g>
+  <path d="M180 237c-54 16-85 51-92 103M540 237c54 16 85 51 92 103" stroke="#c4b0ee" stroke-width="3" stroke-linecap="round" stroke-opacity=".7"/>
+  <text x="360" y="409" text-anchor="middle" fill="#a9f36a" fill-opacity=".62" font-family="monospace" font-size="10" letter-spacing="2">ZERO-TOUCH ONBOARDING  /  NAT-SAFE ACCESS  /  FIELD OPS</text>
+</svg>

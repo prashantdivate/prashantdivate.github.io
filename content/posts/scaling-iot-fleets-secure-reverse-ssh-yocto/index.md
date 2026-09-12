@@ -1,10 +1,10 @@
 +++
 title = "Scaling IoT fleets: Secure Reverse SSH into Yocto for Automated Field Deployment"
-date = 2026-05-21T14:34:45+05:30
+date = 2026-09-12T00:01:00+05:30
 draft = false
 description = "Integrate ShellHub with Yocto to enable secure reverse SSH access, zero-touch provisioning, and fleet-scale onboarding for field devices behind NATs and firewalls."
 tags = ["Yocto", "IoT", "ShellHub", "Security", "Remote Access"]
-art = "security"
+art = "reverse-ssh"
 +++
 
 Originally published on Medium: [Scaling IoT fleets: Secure Reverse SSH into Yocto for Automated Field Deployment](https://medium.com/@prashant-divate/scaling-iot-fleets-secure-reverse-ssh-into-yocto-for-automated-field-deployment-df27d54be7f3)
