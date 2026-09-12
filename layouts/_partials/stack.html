@@ -1,45 +1,83 @@
-<div class="stack-scene" data-active-layer="linux">
-<svg class="stack-svg" viewBox="0 0 580 460" fill="none" role="img" aria-labelledby="stack-title stack-desc">
-<title id="stack-title">A connected system, layer by layer</title><desc id="stack-desc">An animated isometric stack showing application, Linux, and hardware layers. A conceptual illustration, not a live device.</desc>
+<div class="stack-scene workbench-scene">
+<svg class="stack-svg expertise-svg workbench-svg" viewBox="0 0 580 460" fill="none" role="img" aria-labelledby="stack-title stack-desc">
+<title id="stack-title">Isometric IoT deployment flow</title><desc id="stack-desc">An animated isometric flow from a Yocto build terminal to a cloud OTA service, into a detailed embedded IoT board, and back through field diagnostics.</desc>
 <defs>
-  <linearGradient id="board-top" x1="110" y1="160" x2="460" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#2b382e"/><stop offset="1" stop-color="#111b17"/></linearGradient>
-  <linearGradient id="chip-top" x1="207" y1="220" x2="340" y2="275"><stop stop-color="#e4ffa4"/><stop offset="1" stop-color="#96c45f"/></linearGradient>
-  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c7f26b" stop-opacity="0"/><stop offset="1" stop-color="#c7f26b" stop-opacity=".4"/></linearGradient>
-  <radialGradient id="ground-glow"><stop stop-color="#a2de56" stop-opacity=".18"/><stop offset="1" stop-color="#a2de56" stop-opacity="0"/></radialGradient>
-  <pattern id="scene-grid" width="32" height="18.4" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M32 0H0v18.4" stroke="#779875" stroke-opacity=".12" stroke-width=".7"/></pattern>
+  <linearGradient id="bench-top" x1="120" y1="245" x2="430" y2="396" gradientUnits="userSpaceOnUse"><stop stop-color="#223127"/><stop offset="1" stop-color="#0c130e"/></linearGradient>
+  <linearGradient id="bench-side" x1="150" y1="325" x2="430" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#172317"/><stop offset="1" stop-color="#070b08"/></linearGradient>
+  <linearGradient id="terminal-face" x1="58" y1="138" x2="202" y2="234" gradientUnits="userSpaceOnUse"><stop stop-color="#202d24"/><stop offset="1" stop-color="#0f1711"/></linearGradient>
+  <linearGradient id="board-top" x1="198" y1="222" x2="385" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#38542f"/><stop offset="1" stop-color="#152414"/></linearGradient>
+  <linearGradient id="device-face" x1="414" y1="155" x2="540" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#2a2439"/><stop offset="1" stop-color="#121018"/></linearGradient>
+  <radialGradient id="workbench-glow"><stop stop-color="#c7f26b" stop-opacity=".19"/><stop offset="1" stop-color="#c7f26b" stop-opacity="0"/></radialGradient>
   <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
 </defs>
-<ellipse cx="290" cy="364" rx="230" ry="90" fill="url(#ground-glow)"/>
-<path d="M20 318 285 165 560 324 292 478Z" fill="url(#scene-grid)"/>
-<path class="signal-orbit" d="M68 304 284 180 512 311 295 437Z" stroke="#3a5140" stroke-dasharray="4 8"/>
-<path d="M291 29V419" stroke="#7b9c6a" stroke-opacity=".18" stroke-dasharray="3 7"/>
-<path d="M52 347h32m-16-16v32M478 160h24m-12-12v24" stroke="#748569" stroke-opacity=".6"/>
-<g class="stack-layer layer-hardware">
-  <path d="m123 307 161-93 169 98v17l-162 94-168-97Z" fill="#0a0f0c" stroke="#4d6846"/>
-  <path d="m123 307 161-93 169 98-162 94Z" fill="url(#board-top)" stroke="#76955d"/>
-  <path d="M291 406v17m-142-113 135-78 143 83-136 78Z" stroke="#354c36"/>
-  <g stroke="#6d9258" stroke-opacity=".55"><path d="m175 302 50-29 47 27m56-25 41 24-39 23M228 365l31-18m65 17 48-27m-100-95 15 9-21 12m-110 58 34 19 35-20"/><path d="m317 231 10 6m12 7 10 6m12 7 10 6m12 7 10 6m12 7 10 6m12 7 10 6" stroke-width="5"/></g>
-  <path d="m245 291 42-24 45 26v16l-42 24-45-26Z" fill="#142414" stroke="#7a985d"/><path d="m245 291 42-24 45 26-42 24Z" fill="#536a3d"/>
-  <path class="data-trace" d="m160 318 53 31 36-20m83-21 49 28 46-26" stroke="#c7f26b" stroke-width="2" stroke-dasharray="6 90"/>
+
+<ellipse cx="292" cy="332" rx="238" ry="105" fill="url(#workbench-glow)"/>
+
+<g class="bench">
+  <path d="M102 306 292 196 482 306 292 416Z" fill="url(#bench-top)" stroke="#5f8150"/>
+  <path d="M102 306v28l190 110v-28Z" fill="url(#bench-side)" stroke="#385333"/>
+  <path d="M482 306v28L292 444v-28Z" fill="#0a100c" stroke="#385333"/>
+  <path d="M160 306 292 230 424 306 292 382Z" stroke="#3d5735"/>
 </g>
-<g class="stack-layer layer-linux">
-  <path d="m123 232 161-93 169 98v17l-162 94-168-97Z" fill="#111b12" stroke="#617d48"/>
-  <path d="m123 232 161-93 169 98-162 94Z" fill="url(#board-top)" stroke="#b6db70"/>
-  <path d="m149 232 135-78 143 83-136 78Z" stroke="#55703e"/><path d="M291 331v17" stroke="#829e50"/>
-  <path d="m216 223 69-40 76 44v15l-69 40-76-44Z" fill="#759641" stroke="#c7f26b"/>
-  <path d="m216 223 69-40 76 44-69 40Z" fill="url(#chip-top)"/>
-  <g stroke="#c7f26b" stroke-width="2"><path d="m233 246-11 6m24 1-11 6m24 1-11 6m24 1-11 6m76-46 12-7m-25-1 12-7m-25-1 12-7m-25-1 12-7m-95 17-12-7m25-1-12-7m25-1-12-7m25-1-12-7m77 59 13 8m-26 0 13 8m-26 0 13 8m-26 0 13 8"/></g>
-  <text x="288" y="232" text-anchor="middle" fill="#1c2e15" font-family="monospace" font-weight="bold" font-size="22" transform="rotate(30 288 232) skewX(-30)">LINUX</text>
-  <circle cx="171" cy="232" r="3" fill="#c7f26b" class="pulse-node"/><circle cx="406" cy="239" r="3" fill="#c7f26b" class="pulse-node"/>
+
+<g class="build-terminal">
+  <path d="M54 170 146 117 230 166 138 219Z" fill="url(#terminal-face)" stroke="#6f8f58"/>
+  <path d="M54 170v54l84 49v-54Z" fill="#101912" stroke="#3d5735"/>
+  <path d="M230 166v54l-92 53v-54Z" fill="#0b110d" stroke="#3d5735"/>
+  <text x="143" y="164" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="9">$ bitbake</text>
+  <path class="console-line" d="M98 181h60" stroke="#c7f26b" stroke-width="5" stroke-linecap="round"/>
+  <path class="console-line line-two" d="M89 196h82" stroke="#8fbf58" stroke-width="5" stroke-linecap="round"/>
+  <path class="console-line line-three" d="M107 211h48" stroke="#6f8d55" stroke-width="5" stroke-linecap="round"/>
+  <text x="139" y="252" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="8">Yocto image</text>
 </g>
-<g class="stack-layer layer-apps">
-  <path d="m153 139 131-76 139 80v12l-132 76-138-80Z" fill="#152019" fill-opacity=".88" stroke="#52704c"/>
-  <path d="m153 139 131-76 139 80-132 77Z" fill="#26382b" fill-opacity=".6" stroke="#8dad6c"/>
-  <g fill="#355034" stroke="#7aa864"><path d="m197 137 35-20 38 22-35 20Z"/><path d="m258 102 26-15 38 22-27 16Z"/><path d="m296 147 35-20 38 22-35 20Z"/><path d="m259 175 24-14 27 15-24 14Z"/></g>
-  <path class="data-trace" d="m235 159 34 20 65-38" stroke="#c7f26b" stroke-width="2" stroke-dasharray="5 80"/>
+
+<g class="cloud-service">
+  <path d="M270 76c-16 0-28 9-32 23-18 1-31 14-31 30 0 18 15 31 34 31h97c20 0 35-14 35-32 0-16-13-29-30-31-8-14-22-21-38-18-8-3-20-3-35-3Z" fill="#121b15" stroke="#7fa862"/>
+  <text x="290" y="121" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="10">OTA CLOUD</text>
+  <text x="290" y="141" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="8">sign / publish / jobs</text>
+  <path class="cloud-pulse" d="M239 159h102" stroke="#c7f26b" stroke-width="2" stroke-linecap="round"/>
 </g>
-<g stroke="#bed884" stroke-opacity=".4" stroke-dasharray="2 5"><path d="M153 151v94M423 155v96M291 232v37"/></g>
-<g class="stack-labels" font-family="monospace" font-size="10" letter-spacing="1.5"><path d="M389 104h93" stroke="#57654f"/><circle cx="389" cy="104" r="2.5" fill="#c7f26b"/><text x="420" y="94" fill="#b5c0ac">APPLICATIONS</text><path d="M380 276h112" stroke="#57654f"/><circle cx="380" cy="276" r="2.5" fill="#c7f26b"/><text x="428" y="265" fill="#c7f26b">KERNEL</text><path d="M98 361h93" stroke="#57654f"/><text x="54" y="380" fill="#b5c0ac">HARDWARE</text></g>
-<circle class="floating-particle particle-one" cx="99" cy="173" r="3" fill="#c7f26b"/><circle class="floating-particle particle-two" cx="482" cy="341" r="2.5" fill="#beabfa"/>
+
+<g class="iot-board">
+  <path d="M194 288 292 232 390 288 292 345Z" fill="url(#board-top)" stroke="#c7f26b" stroke-width="1.5"/>
+  <path d="M194 288v36l98 57v-36Z" fill="#20361d" stroke="#759b54"/>
+  <path d="M390 288v36l-98 57v-36Z" fill="#101a11" stroke="#759b54"/>
+  <path d="M250 285 292 261 335 286 293 310Z" fill="#101912" stroke="#d9ff95" stroke-width="1.5"/>
+  <text x="293" y="291" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="9">i.MX</text>
+  <path d="M212 294 238 279 263 294 237 309Z" fill="#263922" stroke="#79a45a"/>
+  <path d="M325 316 354 299 374 311 345 328Z" fill="#263922" stroke="#79a45a"/>
+  <path d="M218 319 245 303M339 272l27-16M224 337l28 16M363 333l-28 16" stroke="#86ad61" stroke-width="2" stroke-linecap="round"/>
+  <g class="pin-lines" stroke="#c7f26b" stroke-width="2" stroke-linecap="round">
+    <path d="M198 303h-23M211 327h-24M386 303h23M373 327h24"/>
+    <path d="M271 352v25M293 365v25M315 352v25"/>
+  </g>
+  <g class="board-leds">
+    <circle cx="231" cy="288" r="3" fill="#c7f26b"/>
+    <circle cx="354" cy="318" r="3" fill="#c4b0ee"/>
+    <circle cx="321" cy="261" r="2.5" fill="#c7f26b"/>
+  </g>
+  <text x="292" y="408" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="8">secure boot + sensors + network</text>
+</g>
+
+<g class="field-device">
+  <path d="M410 186 488 141 548 176 470 221Z" fill="url(#device-face)" stroke="#846ea8"/>
+  <path d="M410 186v72l60 35v-72Z" fill="#15131d" stroke="#584873"/>
+  <path d="M548 176v72l-78 45v-72Z" fill="#0f0d16" stroke="#584873"/>
+  <text x="477" y="180" text-anchor="middle" fill="#c4b0ee" font-family="monospace" font-size="9">FIELD NODE</text>
+  <text x="477" y="200" text-anchor="middle" fill="#cfc5e6" font-family="monospace" font-size="7">ssh / rdp</text>
+  <text x="477" y="217" text-anchor="middle" fill="#cfc5e6" font-family="monospace" font-size="7">logs / jobs</text>
+  <path d="M438 235h61M438 251h44M438 267h68" stroke="#8f78b2" stroke-width="5" stroke-linecap="round"/>
+</g>
+
+<g class="signal-paths" stroke-linecap="round">
+  <path class="signal-path path-build" d="M175 171C213 130 232 125 250 126"/>
+  <path class="signal-path path-cloud-board" d="M292 160v70"/>
+  <path class="signal-path path-board-field" d="M369 288C395 265 413 248 435 227"/>
+  <path class="signal-path path-field-cloud" d="M461 184C430 118 384 113 356 119"/>
+  <circle class="signal-dot dot-build" cx="175" cy="171" r="4"/>
+  <circle class="signal-dot dot-cloud-board" cx="292" cy="160" r="4"/>
+  <circle class="signal-dot dot-field" cx="369" cy="288" r="4"/>
+  <circle class="signal-dot dot-return" cx="461" cy="184" r="3.5"/>
+</g>
 </svg>
 </div>

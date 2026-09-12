@@ -8,10 +8,9 @@
     <div class="hero-byline"><span class="avatar-monogram">{{ .Site.Data.profile.initials }}</span><div><strong>{{ .Site.Data.profile.name }}</strong><span>{{ .Site.Data.profile.role }}</span></div></div>
   </div>
   <div class="hero-visual">
-    <div class="visual-topline"><span>THE CONNECTED STACK</span><span class="crosshair">+</span></div>
+    <div class="visual-topline"><span>EMBEDDED LINUX WORKBENCH</span><span class="crosshair">+</span></div>
     {{ partial "stack.html" . }}
-    <div class="stack-controls js-only" aria-label="Explore the system layers"><button type="button" data-layer="hardware" aria-pressed="false">01 / Silicon</button><button type="button" data-layer="linux" aria-pressed="true">02 / Linux</button><button type="button" data-layer="apps" aria-pressed="false">03 / Apps</button></div>
-    <p class="stack-caption" aria-live="polite"><span data-stack-caption>Linux / where hardware becomes a platform.</span><small>Concept illustration &middot; not live telemetry</small></p>
+    <p class="stack-caption"><span>Yocto images, BSP bring-up, secure OTA, and remote field access.</span><small>Build systems &middot; device software &middot; fleet operations</small></p>
   </div>
 </section>
 <div class="topic-rail"><div class="container">{{ range .Site.Data.profile.topics }}<span><i aria-hidden="true">+</i>{{ . }}</span>{{ end }}</div></div>
