@@ -53,13 +53,13 @@ By the end of this tutorial, you will learn how to:
 
 We can use ShellHub in below environments:
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-01.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-01.png)
 
 I will demonstrate shellhub integration in Yocto.
 
 After creating a ShellHub account and logging in, you will see the screen below-
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-02.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-02.png)
 
 ## Create a Namespace
 
@@ -73,23 +73,23 @@ After creating a ShellHub account and logging in, you will see the screen below-
 
 Click on "Create namespace".
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-03.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-03.png)
 
 Once your new workspace is created, it will give instructions to add a new device to this workspace.
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-04.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-04.png)
 
 ## Retrieve the Organization Tenant ID
 
 This step is critical because the Tenant ID uniquely identifies your organization's workspace, and you can get that in the curl command-
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-05.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-05.png)
 
 If you copy the above command and execute it on the device, it will install the ShellHub Docker container. But for production or field devices, I don't want to run such a command manually for every device.
 
 ## 2. Architecture Overview
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-06.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-06.png)
 
 ## Zero-Touch Provisioning in Yocto
 
@@ -135,13 +135,13 @@ cat /etc/default/shellhub-agent
 
 The shellhub-agent service starts automatically during boot and registers the device with the configured namespace.
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-07.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-07.png)
 
 systemd service file takes care of adding this device into our workspace, for which the above tenant ID is generated, as I mentioned earlier
 
 So when this service starts, it will register the current device into the "board-farm-1" workspace.
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-08.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-08.png)
 
 **Authorize the Device in the Dashboard**
 
@@ -161,17 +161,17 @@ After approval, ShellHub generates a unique SSH identifier (SSHID) for the devic
 
 In my case, I can see the device connection confirmation request on the ShellHub web UI as below:
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-09.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-09.png)
 
 4. Click the Accept button. The device will transition to the Device List tab and generate a unique SSHID.
 
 Once you accept the request, you're all set
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-10.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-10.png)
 
 We can see our device has been successfully added to the device tab-
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-11.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-11.png)
 
 ## Handling Fleet Approvals (Mass Scaling)
 
@@ -202,13 +202,13 @@ done
 
 Once authorized, you can initiate a secure remote session from any external machine without configuring firewalls, port forwarding, or static public IPs.
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-12.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-12.png)
 
 Once a device is authorized, ShellHub supports multiple access methods.
 
 If you click on the dropdown icon beside the CONNECT button, you will see 2 options
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-13.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-13.png)
 
 ### Option A: Native Terminal Connection (Recommended)
 
@@ -236,11 +236,11 @@ This is useful for:
 
 Use the device's Linux credentials when prompted.
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-14.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-14.png)
 
 Hola, your SSH connection is established
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-15.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-15.png)
 
 ## Conclusion
 
@@ -262,4 +262,4 @@ For embedded Linux teams deploying production IoT systems, this architecture sig
 
 Stay tuned for the next part of hosting the shellhub server into your premises if you really care about device vital info shared with shellhub cloud
 
-![Article screenshot](/images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-16.png)
+![Article screenshot](../../images/blogs/scaling-iot-fleets-secure-reverse-ssh-yocto/image-16.png)

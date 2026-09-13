@@ -13,7 +13,7 @@ Get more detailed information of this topic on the [official website](https://th
 
 Remote access to graphical applications running on embedded systems can be a valuable tool for developers and administrators. In this article, we'll explore how to remotely access Wayland applications in a Yocto image using RDP (Remote Desktop Protocol). This method leverages the Wayland display server, specifically Weston, and the FreeRDP library to achieve remote access.
 
-![Wayland RDP setup](/images/blogs/remotely-accessing-wayland-rdp-yocto/image-01.webp)
+![Wayland RDP setup](../../images/blogs/remotely-accessing-wayland-rdp-yocto/image-01.webp)
 
 ## Before You Begin
 
@@ -70,7 +70,7 @@ xfreerdp /v:<target_ip>
 
 Additionally, Remmina can also be used for access.
 
-![Weston desktop shell RDP connection](/images/blogs/remotely-accessing-wayland-rdp-yocto/image-02.png)
+![Weston desktop shell RDP connection](../../images/blogs/remotely-accessing-wayland-rdp-yocto/image-02.png)
 
 As shown in the image above, we can control the remote device and pass commands from the host machine.
 

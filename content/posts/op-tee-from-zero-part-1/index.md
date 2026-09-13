@@ -29,7 +29,7 @@ TEE stands for Trusted Execution Environment. It is an isolated execution enviro
 
 On an ARMv8 processor such as the i.MX8M Plus, the hardware security state is commonly described as Normal World and Secure World. Linux usually runs in the Normal World. OP-TEE runs in the Secure World.
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-01.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-01.png)
 
 ## 2. What OP-TEE is not
 
@@ -43,7 +43,7 @@ On an ARMv8 processor such as the i.MX8M Plus, the hardware security state is co
 
 Linux loads and executes a normal Linux executable. OP-TEE loads and executes a Trusted Application. These are different execution environments and normally use different APIs and build flows.
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-02.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-02.png)
 
 *Figure 2 - Normal host application calling a Trusted Application.*
 
@@ -103,7 +103,7 @@ The host application asks for one of these commands. The sensitive implementatio
 
 No. Only an application that needs a service implemented inside OP-TEE has to call the OP-TEE Client API.
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-03.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-03.png)
 
 ## 5.1 The three client calls to recognize
 
@@ -119,7 +119,7 @@ There are also close-session/finalize calls and parameter structures, but the th
 
 ## 6. The Four Main Pieces You Should Remember
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-04.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-04.png)
 
 **Also remember /dev/tee0 **is the Linux device interface exposed by the kernel TEE framework. libteec uses the Linux TEE interface; you normally do not implement TrustZone switching yourself in the application.
 
@@ -127,7 +127,7 @@ There are also close-session/finalize calls and parameter structures, but the th
 
 The optee-test package is useful because it already contains both sides of the architecture: a normal Linux test program called xtest and many Trusted Applications used by individual tests.
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-05.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-05.png)
 
 *Figure 3 - optee-test source code and its two classes of outputs.*
 
@@ -153,7 +153,7 @@ build contains multiple .ta files there, which is expected: different xtest case
 
 ## 8. Exactly What Happens When You Run xtest
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-06.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-06.png)
 
 *Figure 4 - End-to-end xtest request flow.*
 
@@ -227,7 +227,7 @@ You run only the host program from Linux. The TA is entered because the host ope
 
 ## 10. Where OP-TEE Fits in Your i.MX8MP Boot
 
-![Article screenshot](/images/blogs/op-tee-from-zero-part-1/image-07.png)
+![Article screenshot](../../images/blogs/op-tee-from-zero-part-1/image-07.png)
 
 *Figure 5 - Simplified i.MX8MP boot chain with OP-TEE.*
 
