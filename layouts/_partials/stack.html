@@ -1,83 +1,102 @@
 <div class="stack-scene workbench-scene">
-<svg class="stack-svg expertise-svg workbench-svg" viewBox="0 0 580 460" fill="none" role="img" aria-labelledby="stack-title stack-desc">
-<title id="stack-title">Isometric IoT deployment flow</title><desc id="stack-desc">An animated isometric flow from a Yocto build terminal to a cloud OTA service, into a detailed embedded IoT board, and back through field diagnostics.</desc>
+<svg class="stack-svg lab-svg workbench-svg" viewBox="0 0 580 460" fill="none" role="img" aria-labelledby="stack-title stack-desc">
+<title id="stack-title">Isometric embedded IoT board workbench</title><desc id="stack-desc">An animated isometric embedded board with processor, memory, connectors, secure boot, OTA slots, diagnostics, and live PCB signal traces.</desc>
 <defs>
-  <linearGradient id="bench-top" x1="120" y1="245" x2="430" y2="396" gradientUnits="userSpaceOnUse"><stop stop-color="#223127"/><stop offset="1" stop-color="#0c130e"/></linearGradient>
-  <linearGradient id="bench-side" x1="150" y1="325" x2="430" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#172317"/><stop offset="1" stop-color="#070b08"/></linearGradient>
-  <linearGradient id="terminal-face" x1="58" y1="138" x2="202" y2="234" gradientUnits="userSpaceOnUse"><stop stop-color="#202d24"/><stop offset="1" stop-color="#0f1711"/></linearGradient>
-  <linearGradient id="board-top" x1="198" y1="222" x2="385" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#38542f"/><stop offset="1" stop-color="#152414"/></linearGradient>
-  <linearGradient id="device-face" x1="414" y1="155" x2="540" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#2a2439"/><stop offset="1" stop-color="#121018"/></linearGradient>
-  <radialGradient id="workbench-glow"><stop stop-color="#c7f26b" stop-opacity=".19"/><stop offset="1" stop-color="#c7f26b" stop-opacity="0"/></radialGradient>
-  <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+  <linearGradient id="pcb-top" x1="120" y1="210" x2="462" y2="366" gradientUnits="userSpaceOnUse"><stop stop-color="#233823"/><stop offset=".55" stop-color="#142516"/><stop offset="1" stop-color="#0b110d"/></linearGradient>
+  <linearGradient id="pcb-side-left" x1="92" y1="302" x2="294" y2="426" gradientUnits="userSpaceOnUse"><stop stop-color="#172617"/><stop offset="1" stop-color="#091009"/></linearGradient>
+  <linearGradient id="pcb-chip" x1="222" y1="205" x2="355" y2="307" gradientUnits="userSpaceOnUse"><stop stop-color="#c7f26b"/><stop offset="1" stop-color="#5a8a32"/></linearGradient>
+  <linearGradient id="panel-fill" x1="77" y1="112" x2="236" y2="177" gradientUnits="userSpaceOnUse"><stop stop-color="#172217"/><stop offset="1" stop-color="#0d130e"/></linearGradient>
+  <radialGradient id="lab-glow"><stop stop-color="#c7f26b" stop-opacity=".18"/><stop offset="1" stop-color="#c7f26b" stop-opacity="0"/></radialGradient>
+  <filter id="lab-soft-glow" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="4"/></filter>
 </defs>
 
-<ellipse cx="292" cy="332" rx="238" ry="105" fill="url(#workbench-glow)"/>
+<ellipse cx="292" cy="305" rx="244" ry="120" fill="url(#lab-glow)"/>
 
-<g class="bench">
-  <path d="M102 306 292 196 482 306 292 416Z" fill="url(#bench-top)" stroke="#5f8150"/>
-  <path d="M102 306v28l190 110v-28Z" fill="url(#bench-side)" stroke="#385333"/>
-  <path d="M482 306v28L292 444v-28Z" fill="#0a100c" stroke="#385333"/>
-  <path d="M160 306 292 230 424 306 292 382Z" stroke="#3d5735"/>
+<g class="scope-card">
+  <rect x="75" y="78" width="178" height="112" rx="12" fill="url(#panel-fill)" stroke="#5f8150"/>
+  <text x="164" y="105" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="9">BOOT TELEMETRY</text>
+  <path class="wave-line" d="M105 132h24l8-18 13 40 12-23h51" stroke="#c7f26b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M105 160h102M105 176h57M176 176h39" stroke="#6f8d55" stroke-width="4" stroke-linecap="round"/>
+  <text x="164" y="209" text-anchor="middle" fill="#96a88c" font-family="monospace" font-size="8">u-boot -> kernel -> userspace</text>
 </g>
 
-<g class="build-terminal">
-  <path d="M54 170 146 117 230 166 138 219Z" fill="url(#terminal-face)" stroke="#6f8f58"/>
-  <path d="M54 170v54l84 49v-54Z" fill="#101912" stroke="#3d5735"/>
-  <path d="M230 166v54l-92 53v-54Z" fill="#0b110d" stroke="#3d5735"/>
-  <text x="143" y="164" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="9">$ bitbake</text>
-  <path class="console-line" d="M98 181h60" stroke="#c7f26b" stroke-width="5" stroke-linecap="round"/>
-  <path class="console-line line-two" d="M89 196h82" stroke="#8fbf58" stroke-width="5" stroke-linecap="round"/>
-  <path class="console-line line-three" d="M107 211h48" stroke="#6f8d55" stroke-width="5" stroke-linecap="round"/>
-  <text x="139" y="252" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="8">Yocto image</text>
-</g>
+<g class="pcb-board">
+  <path d="M86 284 292 165 500 285 292 405Z" fill="url(#pcb-top)" stroke="#71955a" stroke-width="1.3"/>
+  <path d="M86 284v28l206 120v-27Z" fill="url(#pcb-side-left)" stroke="#344c31"/>
+  <path d="M500 285v27L292 432v-27Z" fill="#070d09" stroke="#344c31"/>
+  <path d="M129 284 292 190 457 285 292 380Z" stroke="#3d5735"/>
 
-<g class="cloud-service">
-  <path d="M270 76c-16 0-28 9-32 23-18 1-31 14-31 30 0 18 15 31 34 31h97c20 0 35-14 35-32 0-16-13-29-30-31-8-14-22-21-38-18-8-3-20-3-35-3Z" fill="#121b15" stroke="#7fa862"/>
-  <text x="290" y="121" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="10">OTA CLOUD</text>
-  <text x="290" y="141" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="8">sign / publish / jobs</text>
-  <path class="cloud-pulse" d="M239 159h102" stroke="#c7f26b" stroke-width="2" stroke-linecap="round"/>
-</g>
-
-<g class="iot-board">
-  <path d="M194 288 292 232 390 288 292 345Z" fill="url(#board-top)" stroke="#c7f26b" stroke-width="1.5"/>
-  <path d="M194 288v36l98 57v-36Z" fill="#20361d" stroke="#759b54"/>
-  <path d="M390 288v36l-98 57v-36Z" fill="#101a11" stroke="#759b54"/>
-  <path d="M250 285 292 261 335 286 293 310Z" fill="#101912" stroke="#d9ff95" stroke-width="1.5"/>
-  <text x="293" y="291" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="9">i.MX</text>
-  <path d="M212 294 238 279 263 294 237 309Z" fill="#263922" stroke="#79a45a"/>
-  <path d="M325 316 354 299 374 311 345 328Z" fill="#263922" stroke="#79a45a"/>
-  <path d="M218 319 245 303M339 272l27-16M224 337l28 16M363 333l-28 16" stroke="#86ad61" stroke-width="2" stroke-linecap="round"/>
-  <g class="pin-lines" stroke="#c7f26b" stroke-width="2" stroke-linecap="round">
-    <path d="M198 303h-23M211 327h-24M386 303h23M373 327h24"/>
-    <path d="M271 352v25M293 365v25M315 352v25"/>
+  <g class="copper-traces" stroke="#86ad61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path class="trace-path trace-a" d="M143 286 215 245 251 265"/>
+    <path class="trace-path trace-b" d="M334 264 397 228 451 260"/>
+    <path class="trace-path trace-c" d="M205 332 247 308 292 334 345 303"/>
+    <path class="trace-path trace-d" d="M151 307h74l38-22"/>
+    <path class="trace-path trace-e" d="M356 334h58l41-23"/>
   </g>
-  <g class="board-leds">
-    <circle cx="231" cy="288" r="3" fill="#c7f26b"/>
-    <circle cx="354" cy="318" r="3" fill="#c4b0ee"/>
-    <circle cx="321" cy="261" r="2.5" fill="#c7f26b"/>
+
+  <g class="pin-header" fill="#c7f26b">
+    <circle cx="136" cy="299" r="3"/><circle cx="149" cy="292" r="3"/><circle cx="162" cy="285" r="3"/><circle cx="175" cy="278" r="3"/>
+    <circle cx="422" cy="278" r="3"/><circle cx="435" cy="286" r="3"/><circle cx="448" cy="293" r="3"/><circle cx="461" cy="301" r="3"/>
   </g>
-  <text x="292" y="408" text-anchor="middle" fill="#b5c0ac" font-family="monospace" font-size="8">secure boot + sensors + network</text>
+
+  <g class="soc">
+    <path d="M230 271 292 235 355 271 292 308Z" fill="url(#pcb-chip)" stroke="#e2ff9d" stroke-width="1.5"/>
+    <path d="M249 271 292 246 336 271 292 296Z" fill="#122016" stroke="#30472b"/>
+    <text x="292" y="276" text-anchor="middle" fill="#c7f26b" font-family="monospace" font-size="10">i.MX8MP</text>
+    <g stroke="#c7f26b" stroke-width="2" stroke-linecap="round">
+      <path d="M240 281h-23M252 288h-24M344 281h23M332 288h24"/>
+      <path d="M277 305v21M292 313v21M307 305v21"/>
+    </g>
+  </g>
+
+  <g class="module module-ddr">
+    <path d="M168 263 209 239 246 260 204 285Z" fill="#253923" stroke="#6d9452"/>
+    <text x="207" y="263" text-anchor="middle" fill="#c5d2bc" font-family="monospace" font-size="8">DDR</text>
+  </g>
+  <g class="module module-emmc">
+    <path d="M345 299 386 276 418 294 376 318Z" fill="#263922" stroke="#6d9452"/>
+    <text x="382" y="297" text-anchor="middle" fill="#c5d2bc" font-family="monospace" font-size="8">eMMC</text>
+  </g>
+  <g class="module module-pmic">
+    <path d="M326 233 361 213 394 232 358 253Z" fill="#192819" stroke="#6d9452"/>
+    <text x="360" y="234" text-anchor="middle" fill="#c5d2bc" font-family="monospace" font-size="7">PMIC</text>
+  </g>
+
+  <g class="ethernet">
+    <path d="M407 248 451 223 483 241 439 266Z" fill="#111a14" stroke="#8f78b2"/>
+    <path d="M424 245h39M418 253h33" stroke="#8f78b2" stroke-width="4" stroke-linecap="round"/>
+    <text x="445" y="226" text-anchor="middle" fill="#c4b0ee" font-family="monospace" font-size="7">ETH</text>
+  </g>
+  <g class="usb">
+    <path d="M116 322 162 295 198 316 152 343Z" fill="#101912" stroke="#7fa862"/>
+    <text x="157" y="321" text-anchor="middle" fill="#c5d2bc" font-family="monospace" font-size="8">USB-C</text>
+  </g>
+
+  <g class="status-leds" filter="url(#lab-soft-glow)">
+    <circle cx="220" cy="225" r="4" fill="#c7f26b"/>
+    <circle cx="392" cy="254" r="4" fill="#c4b0ee"/>
+    <circle cx="314" cy="337" r="3.5" fill="#c7f26b"/>
+  </g>
 </g>
 
-<g class="field-device">
-  <path d="M410 186 488 141 548 176 470 221Z" fill="url(#device-face)" stroke="#846ea8"/>
-  <path d="M410 186v72l60 35v-72Z" fill="#15131d" stroke="#584873"/>
-  <path d="M548 176v72l-78 45v-72Z" fill="#0f0d16" stroke="#584873"/>
-  <text x="477" y="180" text-anchor="middle" fill="#c4b0ee" font-family="monospace" font-size="9">FIELD NODE</text>
-  <text x="477" y="200" text-anchor="middle" fill="#cfc5e6" font-family="monospace" font-size="7">ssh / rdp</text>
-  <text x="477" y="217" text-anchor="middle" fill="#cfc5e6" font-family="monospace" font-size="7">logs / jobs</text>
-  <path d="M438 235h61M438 251h44M438 267h68" stroke="#8f78b2" stroke-width="5" stroke-linecap="round"/>
+<g class="label-chips" font-family="monospace" font-size="8">
+  <g class="label-chip chip-one"><path d="M81 240h82l14 13-14 13H81Z" fill="#101912" stroke="#557348"/><text x="122" y="257" text-anchor="middle" fill="#c7f26b">BSP BRING-UP</text></g>
+  <g class="label-chip chip-two"><path d="M373 119h96l14 13-14 13h-96Z" fill="#101912" stroke="#557348"/><text x="421" y="136" text-anchor="middle" fill="#c7f26b">SECURE BOOT</text></g>
+  <g class="label-chip chip-three"><path d="M355 381h91l14 13-14 13h-91Z" fill="#101912" stroke="#557348"/><text x="400" y="398" text-anchor="middle" fill="#c7f26b">OTA A/B</text></g>
+  <g class="label-chip chip-four"><path d="M96 364h106l14 13-14 13H96Z" fill="#15131d" stroke="#6c5a8e"/><text x="149" y="381" text-anchor="middle" fill="#c4b0ee">DIAGNOSTICS</text></g>
 </g>
 
-<g class="signal-paths" stroke-linecap="round">
-  <path class="signal-path path-build" d="M175 171C213 130 232 125 250 126"/>
-  <path class="signal-path path-cloud-board" d="M292 160v70"/>
-  <path class="signal-path path-board-field" d="M369 288C395 265 413 248 435 227"/>
-  <path class="signal-path path-field-cloud" d="M461 184C430 118 384 113 356 119"/>
-  <circle class="signal-dot dot-build" cx="175" cy="171" r="4"/>
-  <circle class="signal-dot dot-cloud-board" cx="292" cy="160" r="4"/>
-  <circle class="signal-dot dot-field" cx="369" cy="288" r="4"/>
-  <circle class="signal-dot dot-return" cx="461" cy="184" r="3.5"/>
+<g class="wireless" stroke="#c4b0ee" stroke-width="2" stroke-linecap="round">
+  <path d="M457 188c19 8 34 22 43 41"/>
+  <path d="M473 165c31 12 55 36 68 67"/>
+  <path d="M489 142c43 18 75 49 91 91"/>
+  <circle class="radio-dot" cx="445" cy="219" r="4" fill="#c4b0ee" stroke="none" filter="url(#lab-soft-glow)"/>
+</g>
+
+<g class="trace-pulses" fill="#c7f26b" filter="url(#lab-soft-glow)">
+  <circle class="trace-pulse pulse-one" cx="143" cy="286" r="4"/>
+  <circle class="trace-pulse pulse-two" cx="334" cy="264" r="4"/>
+  <circle class="trace-pulse pulse-three" cx="205" cy="332" r="4"/>
 </g>
 </svg>
 </div>
