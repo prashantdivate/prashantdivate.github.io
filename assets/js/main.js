@@ -102,6 +102,32 @@
     }));
   });
 
+  // Make cards feel interactive without changing their accessible links.
+  const canTilt = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  all('[data-card-link]').forEach(card => {
+    const link = one('a[href]', card);
+    if (!link) return;
+    card.addEventListener('click', event => {
+      if (event.target instanceof Element && event.target.closest('a, button')) return;
+      link.click();
+    });
+    if (!canTilt) return;
+    card.addEventListener('pointermove', event => {
+      if (root.dataset.motion === 'off') return;
+      const box = card.getBoundingClientRect();
+      const x = (event.clientX - box.left) / box.width;
+      const y = (event.clientY - box.top) / box.height;
+      card.style.setProperty('--spot-x', `${Math.round(x * 100)}%`);
+      card.style.setProperty('--spot-y', `${Math.round(y * 100)}%`);
+      card.style.setProperty('--tilt-x', `${(x - .5) * 3}deg`);
+      card.style.setProperty('--tilt-y', `${(.5 - y) * 3}deg`);
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.removeProperty('--tilt-x');
+      card.style.removeProperty('--tilt-y');
+    });
+  });
+
   // Load the static Hugo-generated search index once, when it is needed.
   const indexPromises = new Map();
   function loadIndex(url) {
