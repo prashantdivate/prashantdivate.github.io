@@ -66,6 +66,21 @@
     matchMedia('(min-width: 681px)').addEventListener('change', closeMenu);
   }
 
+  // Conceptual system illustration: selecting a layer changes its emphasis.
+  const layerDescriptions = {
+    hardware: 'Silicon / where software meets the physical world.',
+    linux: 'Linux / where hardware becomes a platform.',
+    apps: 'Applications / where the platform becomes useful.'
+  };
+  all('[data-layer]').forEach(button => button.addEventListener('click', () => {
+    const selected = button.dataset.layer;
+    all('[data-layer]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+    const scene = one('.stack-scene');
+    if (scene) scene.dataset.activeLayer = selected;
+    const caption = one('[data-stack-caption]');
+    if (caption) caption.textContent = layerDescriptions[selected];
+  }));
+
   // A one-time entrance animation. Elements are never hidden by default.
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {

@@ -2,8 +2,8 @@
 title = "OP-TEE from Zero: Part 1"
 date = 2026-09-12T00:03:00+05:30
 draft = false
-description = "A beginner-friendly map of OP-TEE, ARM TrustZone, Trusted Applications, libteec, tee-supplicant, xtest, and the i.MX8MP boot flow."
-tags = ["OP-TEE", "Security", "Linux", "Yocto", "i.MX8MP"]
+description = "A beginner-friendly map of OP-TEE, ARM TrustZone, Trusted Applications, libteec, tee-supplicant, xtest, and the ARM secure boot flow."
+tags = ["OP-TEE", "Security", "Linux", "Yocto", "TrustZone"]
 art = "optee"
 +++
 
