@@ -1,0 +1,95 @@
+{{ define "main" }}
+{{ $linkedin := .Site.Data.profile.linkedin }}
+{{ with $linkedin }}
+<a class="sticky-service-button" href="{{ . }}">Avail Service</a>
+{{ end }}
+
+<section class="container services-source">
+  <div class="services-source-heading">
+    <span class="eyebrow">OUR SERVICES</span>
+    <h2>WHY CHOOSE ME</h2>
+  </div>
+  <p>
+    I am passionate about helping product and software teams build better embedded Linux systems. The focus is practical:
+    high-quality engineering, hands-on execution, and clear technical choices that hold up as the product moves from
+    prototype to field deployment.
+  </p>
+  <p>
+    Along with platform-specific training and guidance, I can support the complete path from early board evaluation to a
+    maintainable Yocto distribution, CI/CD build flow, software integration, automated validation, and field-ready release
+    process.
+  </p>
+
+  <div class="services-source-heading services-source-heading-spaced">
+    <h2>WHAT I DO</h2>
+  </div>
+  <div class="services-checker-grid">
+    <article class="services-checker-card is-light" data-reveal>
+      <div class="services-card-icon"><img src="{{ "images/services/o6.png" | relURL }}" alt="" loading="lazy"></div>
+      <h3>Board bring-up</h3>
+      <p>Provide support in evaluating a new chip or bringing up a board from scratch.</p>
+      <span class="services-card-line" aria-hidden="true"></span>
+    </article>
+    <article class="services-checker-card is-dark" data-reveal>
+      <div class="services-card-icon"><img src="{{ "images/services/o2.png" | relURL }}" alt="" loading="lazy"></div>
+      <h3>Unified OS platform</h3>
+      <p>Unified OS platform with multi-architecture support in a single distro.</p>
+      <span class="services-card-line" aria-hidden="true"></span>
+    </article>
+    <article class="services-checker-card is-light" data-reveal>
+      <div class="services-card-icon"><img src="{{ "images/services/o3.png" | relURL }}" alt="" loading="lazy"></div>
+      <h3>Toolchain development</h3>
+      <p>Develop a common SDK for projects to streamline software development.</p>
+      <span class="services-card-line" aria-hidden="true"></span>
+    </article>
+    <article class="services-checker-card is-dark" data-reveal>
+      <div class="services-card-icon"><img src="{{ "images/services/o1.png" | relURL }}" alt="" loading="lazy"></div>
+      <h3>Virtual CI/CD development</h3>
+      <p>Cloud-based CI/CD pipelines for onboarding projects through Azure, Bitbucket Bamboo, and GitHub Actions.</p>
+      <span class="services-card-line" aria-hidden="true"></span>
+    </article>
+    <article class="services-checker-card is-light" data-reveal>
+      <div class="services-card-icon"><img src="{{ "images/services/o5.png" | relURL }}" alt="" loading="lazy"></div>
+      <h3>Software integration</h3>
+      <p>Support for software integration and open-source project integration.</p>
+      <span class="services-card-line" aria-hidden="true"></span>
+    </article>
+    <article class="services-checker-card is-dark" data-reveal>
+      <div class="services-card-icon"><img src="{{ "images/services/o4.png" | relURL }}" alt="" loading="lazy"></div>
+      <h3>Automated testing</h3>
+      <p>Automated test validation for every build with better release confidence.</p>
+      <span class="services-card-line" aria-hidden="true"></span>
+    </article>
+  </div>
+</section>
+
+<section class="container services-logo-blocks">
+  <article class="services-logo-row">
+    <div class="services-logo-media">
+      <img src="{{ "images/services/Linux_Foundation_logo.webp" | relURL }}" alt="Linux Foundation logo" loading="lazy">
+    </div>
+    <div class="services-logo-copy">
+      <h2>Linux and embedded Linux</h2>
+      <p>I believe in the open-source operating system model, and I use Linux to build maintainable product platforms. I can support source-level debugging, system services, BSP integration, distro decisions, and production hardening.</p>
+    </div>
+  </article>
+  <article class="services-logo-row is-reverse">
+    <div class="services-logo-media">
+      <img src="{{ "images/services/bash.webp" | relURL }}" alt="Bash logo" loading="lazy">
+    </div>
+    <div class="services-logo-copy">
+      <h2>Software integration</h2>
+      <p>I write scripts for missing components, cross-compile software for application integration, and tune Linux process management so the final device behaves predictably under real workloads.</p>
+    </div>
+  </article>
+  <article class="services-logo-row">
+    <div class="services-logo-media">
+      <img src="{{ "images/services/Yocto_logo.webp" | relURL }}" alt="Yocto Project logo" loading="lazy">
+    </div>
+    <div class="services-logo-copy">
+      <h2>Yocto engineering</h2>
+      <p>I can help with Yocto setup for boards, toolchains, kernels, and bootloaders; distro features such as init systems; security features; third-party layer integration; product-specific meta-layers; BitBake recipes; target images; SDK bundles; BSP updates; container-based build environments; and review of existing Yocto systems.</p>
+    </div>
+  </article>
+</section>
+{{ end }}

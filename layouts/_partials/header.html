@@ -6,6 +6,7 @@
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="{{ "" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a>
+      <a href="{{ "services/" | relURL }}" {{ if eq .Type "services" }}aria-current="page"{{ end }}>Services</a>
       <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="page"{{ end }}>Blogs</a>
       <a href="{{ "projects/" | relURL }}" {{ if eq .Section "projects" }}aria-current="page"{{ end }}>Projects</a>
       <a href="{{ "about/" | relURL }}" {{ if eq .Type "about" }}aria-current="page"{{ end }}>About</a>
