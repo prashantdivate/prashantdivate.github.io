@@ -1,5 +1,5 @@
 +++
 title = 'The archive'
 type = 'archive'
-description = 'All published fieldnotes, ordered by date.'
+description = 'All published blogs, ordered by date.'
 +++

@@ -1,4 +1,4 @@
 {{ define "main" }}
-<section class="container page-intro"><a class="eyebrow breadcrumb" href="{{ "tags/" | relURL }}">FIELDNOTES / TOPICS</a><h1>{{ .Title }}<span class="accent">.</span></h1><p>{{ len .Pages }} blogs to explore.</p></section>
+<section class="container page-intro"><a class="eyebrow breadcrumb" href="{{ "tags/" | relURL }}">EDGE SYSTEMS LAB / TOPICS</a><h1>{{ .Title }}<span class="accent">.</span></h1><p>{{ len .Pages }} blogs to explore.</p></section>
 <section class="container journal-list"><div class="post-grid">{{ range .Pages.ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div></section>
 {{ end }}

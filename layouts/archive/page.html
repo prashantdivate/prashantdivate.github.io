@@ -1,4 +1,4 @@
 {{ define "main" }}
-<section class="container page-intro"><span class="eyebrow">FIELDNOTES / INDEX</span><h1>{{ .Title }}<span class="accent">.</span></h1><p>Every note, in one place. No algorithms in the way.</p></section>
+<section class="container page-intro"><span class="eyebrow">EDGE SYSTEMS LAB / INDEX</span><h1>{{ .Title }}<span class="accent">.</span></h1><p>Every blog, in one place. No algorithms in the way.</p></section>
 <section class="container archive-page">{{ $posts := where .Site.RegularPages "Section" "posts" }}{{ range $posts.GroupByDate "2006" }}<div class="archive-group"><h2>{{ .Key }}</h2><div>{{ range .Pages }}<article class="archive-item"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02" }}</time><a href="{{ .RelPermalink }}">{{ .Title }}</a><span>{{ .ReadingTime }} min</span>{{ partial "icon.html" "external" }}</article>{{ end }}</div></div>{{ end }}</section>
 {{ end }}

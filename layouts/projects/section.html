@@ -1,4 +1,4 @@
 {{ define "main" }}
-<section class="container page-intro"><span class="eyebrow">FIELDNOTES / OPEN SOURCE</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p></section>
+<section class="container page-intro"><span class="eyebrow">EDGE SYSTEMS LAB / OPEN SOURCE</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p></section>
 <section class="container projects-page"><div class="project-grid">{{ range .Site.Data.projects }}{{ partial "project-card.html" . }}{{ end }}</div><aside class="quiet-note">Project visuals are design illustrations, not screenshots or live measurements. The linked repositories are the source of truth for features and releases.</aside><a class="text-link" href="{{ .Site.Data.profile.github }}">All repositories on GitHub {{ partial "icon.html" "external" }}</a></section>
 {{ end }}

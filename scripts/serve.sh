@@ -25,5 +25,5 @@ if [[ "$drafts" == "1" || "$drafts" == "true" ]]; then
   args+=(-D)
 fi
 
-echo "Serving Fieldnotes at ${base_url}"
+echo "Serving Edge Systems Lab at ${base_url}"
 exec "$hugo_bin" "${args[@]}"

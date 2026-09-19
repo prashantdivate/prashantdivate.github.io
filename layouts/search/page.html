@@ -1,4 +1,4 @@
 {{ define "main" }}
-<section class="container page-intro"><span class="eyebrow">FIELDNOTES / SEARCH</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p></section>
+<section class="container page-intro"><span class="eyebrow">EDGE SYSTEMS LAB / SEARCH</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p></section>
 <section class="container search-page"><div class="search-ui" data-search data-index="{{ "index.json" | relURL }}"><label class="sr-only" for="page-search-input">Search articles</label><div class="search-box">{{ partial "icon.html" "search" }}<input id="page-search-input" type="search" placeholder="Try Linux, updates, or containers..." autocomplete="off"></div><p class="search-status muted" role="status">Search titles, topics, and article text.</p><div class="search-results"></div></div><noscript><p>Interactive search needs JavaScript. You can still <a href="{{ "archive/" | relURL }}">browse every article in the archive</a>.</p></noscript></section>
 {{ end }}

@@ -25,5 +25,5 @@ if ($Drafts) {
   $Args += "-D"
 }
 
-Write-Host "Serving Fieldnotes at $BaseUrl"
+Write-Host "Serving Edge Systems Lab at $BaseUrl"
 & $Hugo @Args

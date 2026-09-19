@@ -1,14 +1,14 @@
 # Only Hugo builds this website. GitHub Actions overrides baseURL automatically.
 baseURL = 'https://prashantdivate.github.io/'
 languageCode = 'en-us'
-title = 'Prashant Divate | Fieldnotes'
+title = 'Prashant Divate | Edge Systems Lab'
 enableRobotsTXT = true
 summaryLength = 30
 buildDrafts = false
 buildFuture = false
 
 [params]
-  description = 'Fieldnotes on embedded Linux, Yocto, containers, and the engineering behind connected devices.'
+  description = 'Edge Systems Lab: embedded Linux, Yocto, containers, and the engineering behind connected devices.'
   author = 'Prashant Divate'
   defaultTheme = 'dark'
   defaultArt = 'linux'

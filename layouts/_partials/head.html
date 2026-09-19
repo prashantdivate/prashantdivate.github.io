@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#101310">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
-<link rel="alternate" type="application/rss+xml" title="Fieldnotes RSS" href="{{ "index.xml" | relURL }}">
+<link rel="alternate" type="application/rss+xml" title="Edge Systems Lab RSS" href="{{ "index.xml" | relURL }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
 <meta property="og:url" content="{{ .Permalink }}">
@@ -19,9 +19,9 @@
 <script>
 (function () {
   try {
-    var theme = localStorage.getItem('fieldnotes-theme');
+    var theme = localStorage.getItem('edge-systems-lab-theme');
     if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
-    var motion = localStorage.getItem('fieldnotes-motion');
+    var motion = localStorage.getItem('edge-systems-lab-motion');
     document.documentElement.dataset.motion = motion === 'off' || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'off' : 'on';
   } catch (_) { if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.dataset.motion = 'off'; }
 })();

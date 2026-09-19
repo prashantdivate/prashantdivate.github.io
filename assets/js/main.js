@@ -1,4 +1,4 @@
-/* Fieldnotes: progressively enhanced, dependency-free interactions.
+/* Edge Systems Lab: progressively enhanced, dependency-free interactions.
    Content, navigation, articles, and project links work without this script. */
 (() => {
   'use strict';
@@ -21,7 +21,7 @@
   }
   if (themeButton) themeButton.addEventListener('click', () => {
     root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-    storage.set('fieldnotes-theme', root.dataset.theme);
+    storage.set('edge-systems-lab-theme', root.dataset.theme);
     refreshTheme();
   });
   refreshTheme();
@@ -29,7 +29,7 @@
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const motionButton = one('.motion-toggle');
   function refreshMotion() {
-    const off = reducedMotion.matches || storage.get('fieldnotes-motion') === 'off';
+    const off = reducedMotion.matches || storage.get('edge-systems-lab-motion') === 'off';
     root.dataset.motion = off ? 'off' : 'on';
     if (!motionButton) return;
     one('[data-motion-label]', motionButton).textContent = off ? 'off' : 'on';
@@ -38,7 +38,7 @@
     motionButton.title = reducedMotion.matches ? 'Reduced motion is enabled in your system settings.' : 'Pause or resume decorative animations';
   }
   if (motionButton) motionButton.addEventListener('click', () => {
-    storage.set('fieldnotes-motion', root.dataset.motion === 'on' ? 'off' : 'on');
+    storage.set('edge-systems-lab-motion', root.dataset.motion === 'on' ? 'off' : 'on');
     refreshMotion();
   });
   reducedMotion.addEventListener('change', refreshMotion);
@@ -210,7 +210,7 @@
         renderResults(results, matches.slice(0, 20).map(result => result.item));
         status.textContent = query
           ? (matches.length ? `${matches.length} ${matches.length === 1 ? 'result' : 'results'}${matches.length > 20 ? ' (showing the first 20)' : ''}.` : 'No results. Try a different term, or browse the archive.')
-          : 'Recent fieldnotes. Start typing to narrow the list.';
+          : 'Recent blogs. Start typing to narrow the list.';
       } catch (_) {
         if (current !== generation) return;
         results.replaceChildren();

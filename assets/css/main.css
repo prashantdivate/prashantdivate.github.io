@@ -1,4 +1,4 @@
-/* FIELDNOTES ---------------------------------------------------------------
+/* EDGE SYSTEMS LAB ---------------------------------------------------------
    Change these tokens to restyle the entire site. No CSS framework required.
    Sections: foundation, navigation, home, cards, content, search, responsive.
    ---------------------------------------------------------------------- */
@@ -254,21 +254,21 @@ html[data-theme='light'] .visual-topline { color: var(--muted); }
 .page-intro > p, .page-intro > div > p { margin-top: 22px; max-width: 580px; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .sticky-service-button { position: fixed; top: 50%; right: -18px; z-index: 20; transform: translateY(-50%); border-radius: 5px; background: var(--accent); color: var(--accent-ink); padding: 11px 15px; font: 700 12px var(--font); box-shadow: 0 10px 30px #0006; }
 .sticky-service-button:hover { right: 0; color: var(--accent-ink); }
-.services-source { padding-block: 76px 44px; text-align: center; }
-.services-source-heading h2 { margin-top: 10px; font-size: 32px; text-transform: uppercase; }
-.services-source-heading-spaced { margin-top: 58px; }
-.services-source > p { max-width: 980px; margin: 18px auto 0; color: var(--muted); font-size: 16px; line-height: 1.9; text-align: left; }
+.services-page-intro { border-bottom: 1px solid var(--border); }
+.services-source { padding-block: 58px 44px; text-align: left; }
+.services-source-heading-spaced { margin-top: 70px; }
+.services-source-copy { max-width: 980px; }
+.services-source-copy p { margin-top: 18px; color: var(--muted); font-size: 16px; line-height: 1.9; }
 .services-checker-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 34px; }
 .services-checker-card { position: relative; min-height: 285px; padding: 30px 24px; border-radius: 5px; box-shadow: 0 18px 50px #0004; overflow: hidden; transition: transform .45s ease, box-shadow .45s ease, border-color .45s ease; }
-.services-checker-card::before { content: ''; position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--accent), var(--purple)); opacity: .82; }
-.services-checker-card.is-light { background: linear-gradient(145deg, #e5ffc0, #f7ffea); color: #14210d; border: 1px solid #d8ff9a; }
-.services-checker-card.is-dark { background: linear-gradient(145deg, #111611, #1a2319); color: var(--text); border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border)); }
+.services-checker-card.is-light { background: #fff; color: #0a0b09; border: 1px solid #fff; }
+.services-checker-card.is-dark { background: #111611; color: var(--text); border: 1px solid #2b3329; }
 .services-checker-card:hover, .services-checker-card:focus-within { transform: translateY(-18px); box-shadow: 0 28px 70px #0007; cursor: pointer; border-color: color-mix(in srgb, var(--accent) 58%, var(--border)); }
 .services-card-icon { width: 82px; height: 82px; margin: 0 auto; }
 .services-card-icon img { width: 100%; height: 100%; object-fit: contain; }
 .services-checker-card.is-light .services-card-icon img { filter: brightness(0) saturate(100%) invert(12%) sepia(16%) saturate(1057%) hue-rotate(47deg) brightness(94%) contrast(94%); }
 .services-checker-card.is-dark .services-card-icon img { filter: brightness(0) saturate(100%) invert(89%) sepia(40%) saturate(645%) hue-rotate(28deg) brightness(102%) contrast(91%); }
-.services-checker-card h3 { margin-top: 22px; font-size: 21px; font-weight: 700; line-height: 1.35; }
+.services-checker-card h3 { margin-top: 22px; text-align: center; font-size: 21px; font-weight: 700; line-height: 1.35; }
 .services-checker-card p { max-height: 0; margin: 0; overflow: hidden; opacity: 0; font-size: 14px; line-height: 1.7; transition: max-height .35s ease, opacity .25s ease, margin .25s ease; }
 .services-checker-card:hover p, .services-checker-card:focus-within p { max-height: 150px; margin-top: 14px; opacity: 1; }
 .services-card-line { position: absolute; left: 10%; right: 10%; bottom: 31px; height: 1px; background: currentColor; opacity: .28; }
@@ -276,7 +276,8 @@ html[data-theme='light'] .visual-topline { color: var(--muted); }
 .services-logo-row { display: grid; grid-template-columns: .8fr 1fr; gap: 54px; align-items: center; width: 88%; margin: 0 auto 95px; }
 .services-logo-row.is-reverse { grid-template-columns: 1fr .8fr; }
 .services-logo-row.is-reverse .services-logo-media { order: 2; }
-.services-logo-media img { display: block; width: min(100%, 330px); margin-inline: auto; filter: drop-shadow(0 24px 60px #0008); }
+.services-logo-media { border: 1px solid var(--border); border-radius: 14px; background: #f8faf5; padding: clamp(24px, 4vw, 42px); box-shadow: 0 24px 70px #0007; }
+.services-logo-media img { display: block; width: min(100%, 330px); max-height: 170px; object-fit: contain; margin-inline: auto; filter: none; }
 .services-logo-copy h2 { font-size: 36px; line-height: 1.15; }
 .services-logo-copy p { margin-top: 18px; color: var(--muted); font-size: 16px; line-height: 1.9; }
 .journal-list { padding-bottom: 90px; }
@@ -552,7 +553,7 @@ html[data-motion='off'] .post-card:hover, html[data-motion='off'] .project-card:
   .services-strip h2 { font-size: 30px; }
   .sticky-service-button { display: none; }
   .services-source { padding-block: 52px 30px; }
-  .services-source > p { font-size: 15px; }
+  .services-source-copy p { font-size: 15px; }
   .services-checker-grid { grid-template-columns: 1fr; gap: 18px; }
   .services-checker-card { min-height: 245px; }
   .services-checker-card p { max-height: none; margin-top: 14px; opacity: 1; }

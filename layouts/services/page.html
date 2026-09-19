@@ -4,24 +4,31 @@
 <a class="sticky-service-button" href="{{ . }}">Avail Service</a>
 {{ end }}
 
-<section class="container services-source">
-  <div class="services-source-heading">
-    <span class="eyebrow">OUR SERVICES</span>
-    <h2>WHY CHOOSE ME</h2>
-  </div>
-  <p>
-    I am passionate about helping product and software teams build better embedded Linux systems. The focus is practical:
-    high-quality engineering, hands-on execution, and clear technical choices that hold up as the product moves from
-    prototype to field deployment.
-  </p>
-  <p>
-    Along with platform-specific training and guidance, I can support the complete path from early board evaluation to a
-    maintainable Yocto distribution, CI/CD build flow, software integration, automated validation, and field-ready release
-    process.
-  </p>
+<section class="container page-intro services-page-intro">
+  <span class="eyebrow">EDGE SYSTEMS LAB / SERVICES</span>
+  <h1>{{ .Title }}<span class="accent">.</span></h1>
+  <p>{{ .Description }}</p>
+</section>
 
-  <div class="services-source-heading services-source-heading-spaced">
-    <h2>WHAT I DO</h2>
+<section class="container services-source section-block">
+  <div class="section-heading">
+    <div><span class="eyebrow">01 / WHY CHOOSE ME</span><h2>Technical depth that ships<span class="accent">.</span></h2></div>
+  </div>
+  <div class="services-source-copy">
+    <p>
+      I am passionate about helping product and software teams build better embedded Linux systems. The focus is practical:
+      high-quality engineering, hands-on execution, and clear technical choices that hold up as the product moves from
+      prototype to field deployment.
+    </p>
+    <p>
+      Along with platform-specific training and guidance, I can support the complete path from early board evaluation to a
+      maintainable Yocto distribution, CI/CD build flow, software integration, automated validation, and field-ready release
+      process.
+    </p>
+  </div>
+
+  <div class="section-heading services-source-heading-spaced">
+    <div><span class="eyebrow">02 / WHAT I DO</span><h2>Services built around product delivery<span class="accent">.</span></h2></div>
   </div>
   <div class="services-checker-grid">
     <article class="services-checker-card is-light" data-reveal>

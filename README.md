@@ -1,6 +1,6 @@
-# Fieldnotes - Prashant Divate
+# Edge Systems Lab - Prashant Divate
 
-An original, animated engineering portfolio and technical journal. **One stack:
+An original, animated engineering portfolio and technical blog. **One stack:
 Hugo + Markdown + a custom theme + GitHub Actions + GitHub Pages.**
 
 The source belongs in the **root** of `prashantdivate.github.io`. It is not a
@@ -13,7 +13,7 @@ Jekyll project and not a folder of manually maintained article HTML.
 
 ## Included
 
-- Responsive homepage, journal, project showcase, about page, archive, topics,
+- Responsive homepage, blogs, services, project showcase, about page, archive, topics,
   individual articles, dedicated search page, and a custom 404 page.
 - Animated layered-system illustration with interactive layer selection,
   subtle entrance/hover animations, and decorative orbit/trace effects.
@@ -34,7 +34,7 @@ Jekyll project and not a folder of manually maintained article HTML.
    preserving the repository's `.git` directory. Remove the previous site's
    deployment workflows. Do not nest this folder or put it under `docs/`.
 3. Set **Settings > Pages > Build and deployment > Source > GitHub Actions**.
-4. Commit and push. Open **Actions > Build, verify and deploy Fieldnotes**.
+4. Commit and push. Open **Actions > Build, verify and deploy Edge Systems Lab**.
 5. Wait for both `build` and `deploy` to pass. Open the URL shown by deployment.
 
 Do **not** select "Deploy from a branch". The repository contains Hugo source;
@@ -47,7 +47,7 @@ Create `content/posts/my-first-post/index.md`:
 
 ```toml
 +++
-title = 'My first fieldnote'
+title = 'My first blog'
 date = 2026-09-12T00:00:00+05:30
 draft = false
 description = 'A short summary of what the reader will learn.'

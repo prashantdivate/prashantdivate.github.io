@@ -119,7 +119,7 @@ class Suite:
             expect(p.locator('[data-post-tags]:visible')).to_have_count(len(self.entries))
             self.mark('Topic filtering and reset against all published posts')
         self.load('search/')
-        expect(p.locator('.search-page .search-status')).to_contain_text('Recent fieldnotes')
+        expect(p.locator('.search-page .search-status')).to_contain_text('Recent blogs')
         self.mark('Dedicated searchable article index')
         if self.entries:
             first_path = urlsplit(self.entries[0]['url']).path

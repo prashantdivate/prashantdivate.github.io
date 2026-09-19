@@ -1,5 +1,5 @@
 +++
-title = "Hello, fieldnotes. A place for useful ideas."
+title = "Hello, Edge Systems Lab. A place for useful ideas."
 date = 2026-09-01T09:00:00+05:30
 draft = false
 description = "A small, maintainable home for engineering notes. Write Markdown, push a commit, and let the publishing workflow do the rest."
@@ -40,7 +40,7 @@ When the article is ready, set `draft = false`, commit the change, and push it t
 
 ```bash
 git add content/posts/my-first-post/
-git commit -m "Add my first fieldnote"
+git commit -m "Add my first blog"
 git push
 ```
 

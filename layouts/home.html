@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="hero container">
   <div class="hero-copy">
-    <div class="terminal-eyebrow"><span class="status-dot"></span><span>~/prashant/fieldnotes</span><span class="cursor">_</span></div>
+    <div class="terminal-eyebrow"><span class="status-dot"></span><span>~/prashant/edge-systems-lab</span><span class="cursor">_</span></div>
     <h1>{{ .Site.Data.profile.headline_first }}<br><span>{{ .Site.Data.profile.headline_second }}</span></h1>
     <p>{{ .Site.Data.profile.intro }}</p>
     <div class="hero-stats" aria-label="Engineering focus areas">
@@ -9,7 +9,7 @@
       <span><strong>Yocto</strong><small>BSP to production images</small></span>
       <span><strong>OTA</strong><small>secure field deployment</small></span>
     </div>
-    <div class="hero-actions"><a class="button button-primary" href="{{ "services/" | relURL }}">Hire me for services {{ partial "icon.html" "arrow" }}</a><a class="text-link" href="{{ "posts/" | relURL }}">Explore the blogs {{ partial "icon.html" "arrow" }}</a><a class="text-link" href="{{ "projects/" | relURL }}">View projects {{ partial "icon.html" "external" }}</a></div>
+    <div class="hero-actions"><a class="button button-primary" href="{{ "services/" | relURL }}">Hire me for services {{ partial "icon.html" "arrow" }}</a></div>
     <div class="hero-byline"><span class="avatar-monogram">{{ .Site.Data.profile.initials }}</span><div><strong>{{ .Site.Data.profile.name }}</strong><span>{{ .Site.Data.profile.role }}</span></div></div>
   </div>
   <div class="hero-visual">

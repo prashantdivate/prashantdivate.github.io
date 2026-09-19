@@ -30,14 +30,14 @@ steps replace that README with this project's README and source.
 
 ## 3. Replace the old website source
 
-Extract the ZIP outside your repository. Inside it is `prashant-fieldnotes/`.
+Extract the ZIP outside your repository. Inside it is `prashant-edge-systems-lab/`.
 
 In the cloned repository, remove the old website files and the old `.github`
 folder **after backing them up**. **Keep `.git/` intact.** Keep any unrelated
 files you deliberately need. If you use a custom domain, see the note below
 before deleting an existing CNAME.
 
-Copy **everything inside `prashant-fieldnotes/`** into the cloned repository,
+Copy **everything inside `prashant-edge-systems-lab/`** into the cloned repository,
 including the hidden `.github`, `.hugo-version`, and `.gitignore` files.
 Do not copy the outer folder as a nested folder.
 
@@ -85,7 +85,7 @@ From the cloned repository:
 ```bash
 git status
 git add -A
-git commit -m "Launch Fieldnotes Hugo portfolio and journal"
+git commit -m "Launch Edge Systems Lab Hugo portfolio and blog"
 git push
 ```
 
@@ -94,7 +94,7 @@ branch. Do not rename branches merely to publish this project. Other branch
 names need a corresponding edit to the workflow's `on.push.branches` list.
 
 If you enabled Pages only after the push, open **Actions > Build, verify and
-deploy Fieldnotes > Run workflow**, select the default branch, and run it.
+deploy Edge Systems Lab > Run workflow**, select the default branch, and run it.
 
 ## 6. Watch the actual verification and deployment
 
