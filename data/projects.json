@@ -11,8 +11,7 @@
       "Yocto",
       "OTA"
     ],
-    "visual": "image",
-    "image": "images/projects/soul-room/soul-room-login.png"
+    "visual": "soul-room"
   },
   {
     "name": "Yocto-Lens",

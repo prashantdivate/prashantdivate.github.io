@@ -1,7 +1,13 @@
 <article class="project-card" data-reveal data-card-link data-tilt>
   <div class="project-preview {{ .visual }}-preview" aria-hidden="true">
     <div class="preview-bar"><span><i></i><i></i><i></i></span><span>{{ .id }} / {{ if .image }}platform preview{{ else }}concept preview{{ end }}</span></div>
-    {{ if .image }}
+    {{ if eq .visual "soul-room" }}
+    <div class="soul-room-body">
+      <div class="soul-room-node"><strong>EDGE FLEET</strong><span>Linux + Yocto</span><small>devices online</small></div>
+      <div class="soul-room-hub"><img src="{{ "images/projects/soul-room/soul-room-mark.png" | relURL }}" alt="" loading="lazy"><strong>CONTROL PLANE</strong></div>
+      <div class="soul-room-node"><strong>OPERATIONS</strong><span>OTA + telemetry</span><small>jobs audited</small></div>
+    </div>
+    {{ else if .image }}
     <img class="project-preview-image" src="{{ .image | relURL }}" alt="" loading="lazy">
     {{ else if eq .visual "terminal" }}
     <div class="terminal-body"><div class="terminal-prompt">$ yocto-lens meta-custom</div><div class="terminal-tabs"><span>STATIC</span><span>STYLE</span><span>HEALTH</span></div><div class="terminal-row"><span>recipes-core/</span><b>inspect</b></div><div class="terminal-row"><span>recipes-kernel/</span><b>inspect</b></div><div class="terminal-row"><span>conf/layer.conf</span><b>inspect</b></div><div class="terminal-cursor">&gt; look closer<span>_</span></div></div>

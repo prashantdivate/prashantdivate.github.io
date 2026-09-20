@@ -5,8 +5,8 @@ draft = false
 description = "Meet Soul Room, an open-source platform for enrolling, monitoring, operating, updating, and securely accessing Ubuntu, Debian, Yocto, and embedded Linux fleets."
 tags = ["Soul Room", "Edge Computing", "IoT", "Yocto", "OTA", "Open Source"]
 art = "linux"
-cover = "images/projects/soul-room/device-health.png"
-coverAlt = "Soul Room device health dashboard showing live Raspberry Pi telemetry"
+cover = "images/projects/soul-room/soul-room-mark.png"
+coverAlt = "Soul Room edge fleet platform mark"
 +++
 
 Project repository: [Soul Room Edge Platform](https://github.com/prashantdivate/soul-room-edge-platform)
