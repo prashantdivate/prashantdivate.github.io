@@ -32,8 +32,9 @@
   {{ $posts := where .Site.RegularPages "Section" "posts" }}
   {{ $posts = $posts.ByDate.Reverse }}
   {{ range first 1 $posts }}
+  {{ $cover := .Params.cover }}
   <article class="featured-post" data-reveal data-card-link data-tilt>
-    <a class="featured-art" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ printf "images/art-%s.svg" (.Params.art | default .Site.Params.defaultArt) | relURL }}" alt="" width="720" height="440"><span class="featured-label"><span class="tiny-dot"></span> LATEST BLOG</span></a>
+    <a class="featured-art" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ if $cover }}{{ $cover | relURL }}{{ else }}{{ printf "images/art-%s.svg" (.Params.art | default .Site.Params.defaultArt) | relURL }}{{ end }}" alt="" width="720" height="440"><span class="featured-label"><span class="tiny-dot"></span> LATEST BLOG</span></a>
     <div class="featured-copy"><div class="post-meta"><span>{{ with .Params.tags }}{{ index . 0 }}{{ else }}Notes{{ end }}</span><span>{{ .ReadingTime }} min read</span></div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ .Description }}</p><div class="featured-bottom"><div><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>{{ if .Params.sample }}<span class="sample-badge">Starter note</span>{{ end }}</div><a class="round-arrow" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">{{ partial "icon.html" "arrow" }}</a></div></div>
   </article>
   {{ end }}

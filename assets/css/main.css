@@ -194,6 +194,7 @@ html[data-theme='light'] .visual-topline { color: var(--muted); }
 .project-card { position: relative; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bg); min-width: 0; transition: transform .25s, border-color .25s, box-shadow .25s; }
 .project-card:hover { transform: perspective(900px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateY(-5px); border-color: color-mix(in srgb, var(--accent) 28%, var(--border)); box-shadow: var(--shadow); }
 .project-preview { height: 226px; margin: 22px 22px 0; border: 1px solid #36472f; border-radius: 7px; background: #111911; overflow: hidden; }
+.project-preview-image { width: 100%; height: calc(100% - 30px); object-fit: cover; object-position: center; }
 .preview-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 15px; font: 8px var(--mono); color: #8d9c83; background: #1a2418; border-bottom: 1px solid #2d3928; }
 .preview-bar > span:first-child { display: flex; gap: 4px; }
 .preview-bar i { width: 5px; height: 5px; background: #5a694e; border-radius: 50%; }

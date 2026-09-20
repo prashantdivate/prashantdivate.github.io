@@ -1,5 +1,20 @@
 [
   {
+    "name": "Soul Room",
+    "id": "soul-room",
+    "eyebrow": "EDGE FLEET PLATFORM",
+    "description": "An open-source control plane and Linux agent for enrolling, monitoring, operating, updating, and securely accessing connected edge devices.",
+    "url": "https://github.com/prashantdivate/soul-room-edge-platform",
+    "tags": [
+      "Go",
+      "React",
+      "Yocto",
+      "OTA"
+    ],
+    "visual": "image",
+    "image": "images/projects/soul-room/soul-room-login.png"
+  },
+  {
     "name": "Yocto-Lens",
     "id": "yocto-lens",
     "eyebrow": "DEVELOPER TOOLING",
